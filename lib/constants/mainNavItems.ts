@@ -1,8 +1,8 @@
 export const mainNavItems = [
-  { label: "Home",     href: "/",               external: false, dropdown: null },
-  { label: "Services", href: "/craft-catalog",  external: false, dropdown: null },
-  { label: "FAQs",     href: "/general-faqs",   external: false, dropdown: null },
-  { label: "Contact",  href: "/contact-us",     external: false, dropdown: null },
+  { label: "Home",     href: "/",              external: false },
+  { label: "Services", href: "/craft-catalog", external: false },
+  { label: "FAQs",     href: "/general-faqs",  external: false },
+  { label: "Contact",  href: "/contact-us",    external: false },
 ];
 
 /* ── ARCHIVED: NCCER nav (remove before production) ── */
