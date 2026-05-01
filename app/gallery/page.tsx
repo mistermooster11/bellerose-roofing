@@ -11,9 +11,9 @@ const galleryItems = [
     label: "Main Sewer Line — Crown Heights, Brooklyn",
     beforeAlt: "Blocked main sewer line before clearing",
     afterAlt:  "Clear main sewer line after hydro jetting",
-    // [TODO: Replace placeholder URLs with real before/after photos]
-    before: "https://pipemonkeys.com/",
-    after:  "https://pipemonkeys.com/",
+    // [TODO: Replace with real before/after job photos from Pipe Monkeys]
+    before: "/images/IMG_9688-1024x682.jpg",
+    after:  "/images/IMG_9750-1024x683.jpg",
     category: "Main Sewer Line",
   },
   {
@@ -21,8 +21,9 @@ const galleryItems = [
     label: "Kitchen Drain — Astoria, Queens",
     beforeAlt: "Grease-clogged kitchen drain before clearing",
     afterAlt:  "Kitchen drain fully cleared and flowing",
-    before: "https://pipemonkeys.com/",
-    after:  "https://pipemonkeys.com/",
+    // [TODO: Replace with real before/after job photos from Pipe Monkeys]
+    before: "/images/iStock-530983109-1.jpg",
+    after:  "/images/IMG_9688-1024x682.jpg",
     category: "Kitchen Sink",
   },
   {
@@ -30,8 +31,9 @@ const galleryItems = [
     label: "Hydro Jetting — Nassau County Home",
     beforeAlt: "Pipe interior with grease buildup",
     afterAlt:  "Clean pipe interior after hydro jetting",
-    before: "https://pipemonkeys.com/",
-    after:  "https://pipemonkeys.com/",
+    // [TODO: Replace with real before/after job photos from Pipe Monkeys]
+    before: "/images/IMG_9750-1024x683.jpg",
+    after:  "/images/iStock-530983109-1.jpg",
     category: "Hydro Jetting",
   },
   {
@@ -39,8 +41,9 @@ const galleryItems = [
     label: "Tub Drain — Bay Ridge, Brooklyn",
     beforeAlt: "Hair-clogged tub drain before clearing",
     afterAlt:  "Tub drain cleared with no damage to tile",
-    before: "https://pipemonkeys.com/",
-    after:  "https://pipemonkeys.com/",
+    // [TODO: Replace with real before/after job photos from Pipe Monkeys]
+    before: "/images/IMG_9688-1024x682.jpg",
+    after:  "/images/IMG_9750-1024x683.jpg",
     category: "Tub & Shower",
   },
   {
@@ -48,8 +51,9 @@ const galleryItems = [
     label: "Camera Inspection — Multi-Unit, Flushing",
     beforeAlt: "Camera view showing root intrusion in sewer line",
     afterAlt:  "Cleared line confirmed via camera after service",
-    before: "https://pipemonkeys.com/",
-    after:  "https://pipemonkeys.com/",
+    // [TODO: Replace with real before/after job photos from Pipe Monkeys]
+    before: "/images/iStock-530983109-1.jpg",
+    after:  "/images/IMG_9688-1024x682.jpg",
     category: "Camera Inspection",
   },
   {
@@ -57,8 +61,9 @@ const galleryItems = [
     label: "Toilet Clog — Levittown, Nassau",
     beforeAlt: "Overflowing toilet before service",
     afterAlt:  "Toilet fully cleared and flushing cleanly",
-    before: "https://pipemonkeys.com/",
-    after:  "https://pipemonkeys.com/",
+    // [TODO: Replace with real before/after job photos from Pipe Monkeys]
+    before: "/images/IMG_9750-1024x683.jpg",
+    after:  "/images/iStock-530983109-1.jpg",
     category: "Toilet",
   },
 ];

@@ -16,7 +16,7 @@ const pipemonkeys: ChannelPageData = {
     title:           "Drain & Sewer Specialists",
     breadcrumbLabel: "About Us",
     imageBg:
-      "url(https://pipemonkeys.com/) no-repeat center center / cover",
+      "url(/images/IMG_9688-1024x682.jpg) no-repeat center center / cover",
     description: (
       <p>
         Pipe Monkeys is a family-owned drain and sewer company serving
@@ -109,7 +109,7 @@ const pipemonkeys: ChannelPageData = {
   },
 
   flexFeature: {
-    imageSrc:    "https://pipemonkeys.com/",
+    imageSrc:    "/images/iStock-1220765707-443x559-1.jpg",
     title:       "Backed Up Right Now?",
     body: (
       <p>

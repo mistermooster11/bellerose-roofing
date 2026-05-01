@@ -45,7 +45,7 @@ export default function Difference() {
           <div className="w-full md:w-[54%] shrink-0 relative z-20">
             <div className="front-difference__image">
               {/* [TODO: Replace with Pipe Monkeys job site or team photo] */}
-              <VapeImage src="https://pipemonkeys.com/" />
+              <VapeImage src="/images/IMG_9750-1024x683.jpg" />
             </div>
           </div>
 

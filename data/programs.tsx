@@ -38,7 +38,7 @@ export const programsData: ProgramsPageData = {
   ],
 
   hero: {
-    bgImage: "https://pipemonkeys.com/",
+    bgImage: "/images/IMG_9750-1024x683.jpg",
     title: "Our Services",
     description: (
       <p>
