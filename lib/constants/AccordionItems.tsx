@@ -1,63 +1,61 @@
 
-type AccordionLink = { label: string; href: string; external?: boolean };
+type AccordionStep = { label: string; body: string };
 
 export const accordionItems = [
   {
     id: "accordion-0",
-    title: "Associations",
-    image: "https://www.nccer.org/media/2022/12/iStock-530983109-1.jpg",
+    title: "Main Sewer Lines",
+    image: "/images/IMG_9688-1024x682.jpg",
     description:
-      "NCCER can help provide your members with a complete workforce development program that includes recruitment, training, and retention tools. These tools can be incorporated into the services you offer to better serve your membership and help your organization generate non-dues revenue.",
-    learnHref: "https://www.nccer.org/explore/associations/",
-    links: [
-      { label: "Become NCCER Accredited", href: "https://www.nccer.org/benefits-of-nccer-accreditation/" },
-      { label: "Contact Our WFD Solutions Team", href: "https://www.nccer.org/nccer-workforce-development-team/" },
-      { label: "Order Books & Modules", href: "https://www.nccer.org/order-books-modules/" },
-      { label: "Promote Your Program With Pre-Designed Templates", href: "https://hs.nccer.org/association-resources-kit", external: true },
-      { label: "View Journey-Level Assessments", href: "https://www.nccer.org/assessments/" },
-    ] as AccordionLink[],
+      "When the main line backs up, every drain in the building stops. We clear main sewer lines in Brooklyn brownstones, Queens multi-family buildings, and Nassau County homes — same day.",
+    learnHref: "/craft-catalog/main-sewer-lines",
+    steps: [
+      { label: "Diagnose", body: "We assess the blockage and confirm whether a camera inspection is needed before tools go in." },
+      { label: "Quote Upfront", body: "Price confirmed before any work begins — no surprises, no bait-and-switch." },
+      { label: "Clear It", body: "Industrial cutters and hydro jetting break through root masses, grease plugs, and heavy scale until flow is fully restored." },
+      { label: "Confirm & Clean Up", body: "We run water to verify full flow, show you the result, and leave the work area clean." },
+    ] as AccordionStep[],
   },
   {
     id: "accordion-1",
-    title: "Contractors",
-    image: "https://www.nccer.org/media/2023/03/IMG_9688-1024x682.jpg",
+    title: "Kitchen Sink Drains",
+    image: "/images/IMG_9750-1024x683.jpg",
     description:
-      "NCCER provides programs that contractors use to assess, educate and train their craft workforce and develop customized training plans utilizing NCCER curricula.",
-    learnHref: "https://www.nccer.org/explore/contractors/",
-    links: [
-      { label: "Contractors Workforce Development Assessment", href: "https://www.nccer.org/programs-crafts/contractors-workforce-development-assessment/" },
-      { label: "Learn About Industry-Recognized Credentials", href: "https://www.nccer.org/credentials-certifications/industry-recognized-credentials/" },
-      { label: "National Training Service Agreement", href: "https://www.nccer.org/national-training-service-agreement/" },
-      { label: "Verify Credentials", href: "https://web.myaccount.nccer.org/#/online-verification", external: true },
-      { label: "View Our Journey-Level Assessments", href: "https://www.nccer.org/assessments/" },
-    ] as AccordionLink[],
+      "Grease, food debris, and soap scum build up faster in NYC kitchens than anywhere else. We clear kitchen drains across Brooklyn, Queens, and Nassau County with pro snakes and hydro jetting.",
+    learnHref: "/craft-catalog/kitchen-sinks",
+    steps: [
+      { label: "Diagnose", body: "We assess the drain and confirm whether snaking or hydro jetting is the right call for your situation." },
+      { label: "Quote Upfront", body: "Price confirmed before we touch anything — what we quote is what you pay." },
+      { label: "Clear It", body: "Hydro jetting scrubs grease from pipe walls for recurring clogs; a professional snake handles straightforward blockages fast." },
+      { label: "Test & Clean Up", body: "Hot water confirms full drainage. We wipe down the work area before leaving." },
+    ] as AccordionStep[],
   },
   {
     id: "accordion-2",
-    title: "High Schools",
-    image: "https://www.nccer.org/media/2023/02/Image.jpg",
+    title: "Hydro Jetting",
+    image: "/images/iStock-530983109-1.jpg",
     description:
-      "NCCER's program accreditation is recognized by many state Departments of Education and links secondary, postsecondary and journeyman-level training for skilled craft professionals.",
-    learnHref: "https://www.nccer.org/explore/high-schools/",
-    links: [
-      { label: "Access the Instructor Toolbox", href: "https://toolbox.nccer.org/", external: true },
-      { label: "Become NCCER Accredited", href: "https://www.nccer.org/benefits-of-nccer-accreditation/" },
-      { label: "Learn About High School Builder Program", href: "https://www.nccer.org/builderprogram/" },
-      { label: "Order Books & Modules", href: "https://www.nccer.org/order-books-modules/" },
-    ] as AccordionLink[],
+      "A snake clears a path. Hydro jetting scrubs the pipe walls clean. If the same drain has backed up more than once this year, jetting is the long-term fix.",
+    learnHref: "/craft-catalog/hydro-jetting",
+    steps: [
+      { label: "Camera First", body: "We confirm the pipe is structurally sound before introducing high pressure — jetting a cracked pipe makes it worse." },
+      { label: "Quote Upfront", body: "Price confirmed before we start." },
+      { label: "Jet It", body: "The hose feeds through the clean-out at up to 4,000 PSI, scrubbing pipe walls clean in both directions until flow is fully restored." },
+      { label: "Confirm", body: "We run water to verify full flow. On main line jobs, we can run a post-jet camera to show you the before-and-after." },
+    ] as AccordionStep[],
   },
   {
     id: "accordion-3",
-    title: "Postsecondary",
-    image: "https://www.nccer.org/media/2023/03/Masonrycompetition11-1024x680.jpg",
+    title: "Camera Inspection",
+    image: "/images/IMG_9688-1024x682.jpg",
     description:
-      "NCCER programs offered by postsecondary institutions provide learners with a pathway to lucrative jobs, and countless opportunities for growth and advancement within a rewarding career in construction.",
-    learnHref: "https://www.nccer.org/explore/postsecondary/",
-    links: [
-      { label: "Access the Instructor Toolbox", href: "https://toolbox.nccer.org/", external: true },
-      { label: "Become NCCER Accredited", href: "https://www.nccer.org/benefits-of-nccer-accreditation/" },
-      { label: "Order Books & Modules", href: "https://www.nccer.org/order-books-modules/" },
-      { label: "Learn About Automated Remote Proctoring", href: "https://www.nccer.org/automated-remote-proctoring/" },
-    ] as AccordionLink[],
+      "Before recommending a major repair or repeated service, we run a camera through the line and show you exactly what's there — in real time. No guesswork. No upsells on work you don't need.",
+    learnHref: "/craft-catalog/camera-inspection",
+    steps: [
+      { label: "Access the Line", body: "We locate the clean-out or access point nearest the problem area." },
+      { label: "Quote Upfront", body: "Price confirmed before the camera goes in." },
+      { label: "Run the Camera", body: "High-resolution footage shows root masses, grease, cracks, or offsets in real time — you're watching the screen with us." },
+      { label: "Report & Recommend", body: "We tell you what we found and what needs to be done, with footage to back it up. You decide. No pressure." },
+    ] as AccordionStep[],
   },
 ];

@@ -1,5 +1,6 @@
 import Hero from "@/components/custom/Hero";
 import HomeSectionWithLine from "@/components/custom/HomeSectionWithLine";
+import Insights from "@/components/custom/Insights";
 import Testimonial from "@/components/custom/Testimonial";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       >
         <Hero />
         <HomeSectionWithLine />
+        <Insights />
         <Testimonial />
       </main>
     </>
