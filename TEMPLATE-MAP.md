@@ -3,7 +3,7 @@
 **Styling**: Tailwind CSS v4 + custom CSS (`styles/`)  
 **Package Manager**: pnpm  
 **Architecture**: Hybrid — primary client content lives in `/data/` files (data-driven); homepage sections, FAQs, contact, gallery, service areas, and blog are hardcoded inline in page/component files  
-**Last Mapped**: May 2026  
+**Last Mapped**: May 2026 (v2 — updated after full Pipe Monkeys redesign)  
 **First Client Built**: Pipe Monkeys (drain & sewer — Brooklyn, Queens, Nassau County)
 
 ---
@@ -14,7 +14,9 @@ This is a purpose-built template for **local skilled trade businesses** — no c
 
 **The key insight for repositioning:** Edit data files first — lowest risk, highest leverage. Then work through the hardcoded component list. The service detail pages are driven by `data/craft-catalog/service-pages.tsx` — one entry per service slug. Register every new client in `data/channel/index.ts` or the About Us page will 404.
 
-**Critical difference from NCCER Clone template:** This template already has the full trade page set built in (gallery, service areas, blog). There is nothing to remove — only content to swap. All pages are trade-appropriate out of the box.
+**Critical difference from NCCER Clone template:** This template already has the full trade page set built in (gallery, service areas, blog, privacy policy). There is nothing to remove — only content to swap. All pages are trade-appropriate out of the box.
+
+**Homepage section order (v2):** Hero → HomeSectionWithLine (How It Works) → Insights (Services accordion) → Testimonial → HomeCTA (Call CTA strip). All five sections are active — edit each component directly.
 
 ---
 
@@ -22,7 +24,7 @@ This is a purpose-built template for **local skilled trade businesses** — no c
 
 | Route | Purpose | Data File | Inline Content? |
 |-------|---------|-----------|----------------|
-| `/` | Homepage | None — composed of components | Yes — Hero, Announcements, Difference, Testimonial all hardcoded |
+| `/` | Homepage | `lib/constants/AccordionItems.tsx` (Insights data) | Yes — Hero, Announcements, Difference, Insights, Testimonial, HomeCTA all hardcoded |
 | `/explore/[slug]` | About Us | `data/channel/[slug].tsx` | No — fully data-driven |
 | `/craft-catalog` | Services catalog with filter | `data/craft-catalog/crafts.ts` | Minimal |
 | `/craft-catalog/[slug]` | Individual service detail | `data/craft-catalog/service-pages.tsx` | No — data-driven |
@@ -32,6 +34,7 @@ This is a purpose-built template for **local skilled trade businesses** — no c
 | `/gallery` | Before/After job photo grid | None | Yes — gallery items array inline |
 | `/service-areas` | Regional landing sections | None | Yes — area data inline |
 | `/blog` | Blog post index | None | Yes — post array inline |
+| `/privacy-policy` | Privacy Policy | None | Yes — all sections inline in page file |
 
 **Dynamic route — `/explore/[slug]`:** slug must match a key in `data/channel/index.ts`. Missing registration = 404.
 
@@ -74,14 +77,33 @@ _Type: `ChannelPageData` (defined in `components/custom/channel/types.ts`)_
 
 ---
 
-### `data/craft-catalog/crafts.ts`
-_Drives the services catalog page (`/craft-catalog`) and its filter bar._
+### `lib/constants/AccordionItems.tsx`
+_Drives the Insights services accordion section on the homepage._  
+_Used by `components/custom/Insights.tsx`, `InsightAccordionTabItem.tsx`, and `InsightAccordionDataItem.tsx`._
 
 | Field | Type | Notes |
 |-------|------|-------|
-| `crafts[]` | `CraftItem[]` | Each: `slug, title, categories[], disciplines[], hasAssessment, hasTranslation` |
-| `CATEGORIES` | const array | Filter tab labels — first item must be "All Categories" |
-| `DISCIPLINES` | const array | Secondary filter labels — first item must be "All Disciplines" |
+| `id` | string | Unique accordion ID e.g. `"accordion-0"` |
+| `title` | string | Service name shown as the clickable tab label |
+| `image` | string | Path to placeholder/real image shown in the right panel |
+| `description` | string | Short overview shown in the left panel when expanded |
+| `learnHref` | string | Link to the full service detail page e.g. `/craft-catalog/[slug]` |
+| `steps[]` | `{ label: string; body: string }[]` | 3–4 condensed how-it-works steps shown in the right panel |
+
+**How many items:** Template ships with 4. Sidebar arrow indicator slides to the active item — 3–5 items work cleanly. More than 5 may cause layout issues on mobile.
+
+**Right panel image:** Each item's `image` field is displayed as a background-cover div above the steps. Replace with real job photos before launch.
+
+---
+
+### `data/craft-catalog/crafts.ts`
+_Drives the services catalog page (`/craft-catalog`). Filter bar has been removed — list is now a clean sortable table._
+
+| Field | Type | Notes |
+|-------|------|-------|
+| `crafts[]` | `CraftItem[]` | Each: `slug, title` — categories/disciplines/assessment/translation fields are unused and can be omitted |
+
+**⚠️ Filter bar removed (v2):** `CraftCatalogClient.tsx` no longer imports or renders `CraftFilterBar`. The `CATEGORIES` and `DISCIPLINES` constants in `crafts.ts` are no longer used — you can remove them when setting up a new client, or simply leave them and they'll be ignored.
 
 **Important:** Every `slug` in `crafts[]` must have a matching key in `service-pages.tsx` or the detail page will 404.
 
@@ -156,15 +178,19 @@ export const mainNavItems: MainNavItem[] = [
 | `components/custom/Hero.tsx` | H1 headline, subheading paragraph, CTA phone number + label, hero video `<source src>` | Medium |
 | `components/custom/header/Topnav.tsx` | Phone number in centered top bar (`href="tel:..."` + display text) | Low |
 | `components/custom/Footer.tsx` | Quick links, contact widget (phone, hours), service areas summary, social URLs, copyright name | Low |
-| `components/custom/Announcements.tsx` | "How It Works" headline, 3-step process copy, feature image `backgroundImage` URL | Medium |
-| `components/custom/Difference.tsx` | Stats array (3 items: stat, label, linkText, href), section headline, trust photo `<VapeImage src>` | Medium |
+| `components/custom/Announcements.tsx` | "How It Works" headline, 3-step process copy, feature image `backgroundImage` URL. Has two buttons: "Schedule Service" (tel:) and "See All Services" (/craft-catalog) | Medium |
+| `components/custom/Difference.tsx` | Stats array (3 items: stat, label, linkText, href), section headline, trust photo `<VapeImage src>`. Third stat links to `/craft-catalog` — update if nav changes | Medium |
+| `components/custom/Insights.tsx` | Sub-heading, H2 headline, intro paragraph above the accordion. Accordion items are in `lib/constants/AccordionItems.tsx` | Low |
+| `lib/constants/AccordionItems.tsx` | All 4 accordion entries — title, image, description, learnHref, and 3–4 steps per service | Medium |
+| `components/custom/HomeCTA.tsx` | Sub-heading, H2 headline, body copy, phone number (`href` + display text). This is the compact call-to-action strip above the footer. | Low |
 | `components/custom/Testimonial.tsx` | `testimonials[]` array — quote, name, position, platform per reviewer. Slider auto-advances; add/remove entries freely | Medium |
-| `app/page.tsx` | Which homepage sections to include — template is already clean (Hero → HomeSectionWithLine → Testimonial) | Low |
-| `app/general-faqs/page.tsx` | `faqItems[]` array — all FAQs inline. Replace titles and ReactNode content blocks | Medium |
-| `app/contact-us/page.tsx` | `serviceAreas[]` array (region, description, neighborhoods per area), phone number throughout, Google Maps iframe `src` | Medium |
-| `app/gallery/page.tsx` | `galleryItems[]` array — label, category, before/after image URLs per job card | Medium |
+| `app/page.tsx` | Homepage section order: Hero → HomeSectionWithLine → Insights → Testimonial → HomeCTA. All five active — import and render any new sections here | Low |
+| `app/general-faqs/page.tsx` | `faqItems[]` array — all FAQs inline. CTA section at bottom uses `ia-bg-sky` (light blue) with standard dark text — do not add white text classes | Medium |
+| `app/contact-us/page.tsx` | Hero uses `<CraftHero>` component (full-width image masthead). `serviceAreas[]` array (region, description, neighborhoods per area), phone number throughout, Google Maps iframe `src` | Medium |
+| `app/gallery/page.tsx` | `galleryItems[]` array — 4 items, 2-column grid. Each: label, image URL (single image, aspect-ratio 4/3). No before/after split in this version | Medium |
 | `app/service-areas/page.tsx` | `areas[]` array — slug, region, headline, description, callouts[], neighborhoods per region | Medium |
 | `app/blog/page.tsx` | `posts[]` array — all post entries inline | Low |
+| `app/privacy-policy/page.tsx` | All policy sections inline. Update company name, contact email, and any jurisdiction-specific details | Low |
 
 ---
 
@@ -214,9 +240,9 @@ To reposition for a new client:
 
 `app/contact-us/page.tsx` has four fixed sections in this order:
 
-1. **Hero** — breadcrumb + H1 "Get in Touch" + two-column overview/quick links
+1. **Hero** — uses `<CraftHero>` component (full-width background image with breadcrumb overlay — same as service detail pages). Pass `title`, `bgImage`, and `breadcrumbs` props. Default image: `/images/IMG_9688-1024x682.jpg`.
 2. **Contact Form** — 2-column grid form (name, phone, email, service dropdown, message) + `ia-btn` styled submit button
-3. **Service Areas** — intro paragraph + stacked `AreaSection` components (one per region)
+3. **Service Areas** — intro paragraph + stacked `AreaSection` components (one per region). Sections are plain divs with `paddingBottom` and `borderBottom` — do NOT wrap in `flex-module` or `content-block` (adds unwanted padding).
 4. **Google Map** — iframe embed below all neighborhoods
 
 To reposition: update `serviceAreas[]` array (region, description, neighborhoods), all phone number `href` and display values, and the Google Maps iframe `src` URL.
@@ -253,31 +279,38 @@ Use for every new client build on the PipeMonkey template:
 - [ ] Edit `components/custom/Hero.tsx` — headline, subheading, CTA phone, hero video/image
 - [ ] Edit `components/custom/header/Topnav.tsx` — phone number in top bar
 - [ ] Edit `components/custom/Footer.tsx` — links, contact info, service areas summary, copyright
-- [ ] Edit `components/custom/Announcements.tsx` — How It Works steps + feature image
+- [ ] Edit `components/custom/Announcements.tsx` — How It Works steps + feature image + button labels
 - [ ] Edit `components/custom/Difference.tsx` — trust stats + photo
+- [ ] Edit `lib/constants/AccordionItems.tsx` — 4 accordion service entries (title, image, description, learnHref, steps)
+- [ ] Edit `components/custom/Insights.tsx` — sub-heading, H2, intro paragraph
+- [ ] Edit `components/custom/HomeCTA.tsx` — sub-heading, H2, body copy, phone number
 - [ ] Edit `components/custom/Testimonial.tsx` — replace reviews in `testimonials[]` array
 
 **Inline pages:**
-- [ ] Edit `app/general-faqs/page.tsx` — replace `faqItems[]` with trade-specific FAQs
-- [ ] Edit `app/contact-us/page.tsx` — replace `serviceAreas[]`, all phone numbers, Maps embed URL
-- [ ] Edit `app/gallery/page.tsx` — replace `galleryItems[]` with client job categories + real photos
+- [ ] Edit `app/general-faqs/page.tsx` — replace `faqItems[]` with trade-specific FAQs (6–8 items). CTA section uses `ia-bg-sky` (light blue) — use standard dark text, no white text classes
+- [ ] Edit `app/contact-us/page.tsx` — update `<CraftHero>` bgImage, replace `serviceAreas[]`, all phone numbers, Maps embed URL
+- [ ] Edit `app/gallery/page.tsx` — replace `galleryItems[]` (4 items, single image per job, aspect-ratio 4/3)
 - [ ] Edit `app/service-areas/page.tsx` — replace `areas[]` with client's regions
 - [ ] Edit `app/blog/page.tsx` — replace `posts[]` with relevant article placeholders
+- [ ] Edit `app/privacy-policy/page.tsx` — update company name, contact email, jurisdiction details
 
 **Images (before launch):**
 - [ ] Hero video/image — `Hero.tsx` `<source src>`
 - [ ] Feature section image — `Announcements.tsx` `backgroundImage`
 - [ ] Trust photo — `Difference.tsx` `<VapeImage src>`
+- [ ] Insights accordion images — `lib/constants/AccordionItems.tsx` → `image` field per service (4 images)
+- [ ] Contact page hero — `app/contact-us/page.tsx` → `<CraftHero bgImage="...">` prop
 - [ ] About Us hero — `data/channel/[client].tsx → hero.imageBg`
 - [ ] About Us flex feature — `data/channel/[client].tsx → flexFeature.imageSrc`
 - [ ] Service detail hero — `app/craft-catalog/[slug]/page.tsx → PLACEHOLDER_BG`
-- [ ] Gallery before/after — `app/gallery/page.tsx → galleryItems[].before/.after`
+- [ ] Gallery images — `app/gallery/page.tsx → galleryItems[].image` (4 items)
 - [ ] Logo files — `/public/logos/logo-94.svg` + `/public/logos/logo-long.svg`
 
 **Before shipping:**
 - [ ] All phone numbers match prospect's actual number (grep for `7187491830` — replace every instance)
-- [ ] No Pipe Monkeys–specific content anywhere in the build
+- [ ] No Pipe Monkeys–specific content anywhere in the build (grep for "Pipe Monkeys", "pipe-monkey", "Brooklyn, Queens")
 - [ ] All image slots have real images or `[TODO]` comments
 - [ ] Testimonial placeholders flagged with `// TODO: Replace with real review`
+- [ ] All `learnHref` values in `AccordionItems.tsx` point to valid service slugs
 - [ ] TypeScript builds without errors (check TS Notes above)
 - [ ] `CONTENT-BRIEF.md` is complete
