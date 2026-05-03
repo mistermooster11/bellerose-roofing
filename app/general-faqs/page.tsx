@@ -185,17 +185,17 @@ export default function GeneralFaqsPage() {
         {/* ── CTA ── */}
         <div
           ref={donationRef}
-          className={`front-donation ia-bg-sky flex-module wow fadeInUpS${donationInView ? " is-visible" : ""}`}
+          className={`front-donation ia-bg-dark flex-module wow fadeInUpS${donationInView ? " is-visible" : ""}`}
         >
           <div className="inner inner--slim-1172">
-            <div className={`sub-heading wow fadeInUpS${donationInView ? " is-visible" : ""}`} style={{ animationDelay: "0.2s" }}>
+            <div className={`sub-heading sub-heading__white wow fadeInUpS${donationInView ? " is-visible" : ""}`} style={{ animationDelay: "0.2s" }}>
               Still have questions?
             </div>
-            <h2 className={`h2 wow fadeInUpS${donationInView ? " is-visible" : ""}`} style={{ animationDelay: "0.2s" }}>
+            <h2 className={`h2 ia-white wow fadeInUpS${donationInView ? " is-visible" : ""}`} style={{ animationDelay: "0.2s" }}>
               We&apos;re Here to Help
             </h2>
             <div className={`front-donation__in wow fadeInUpS${donationInView ? " is-visible" : ""}`} style={{ animationDelay: "0.2s" }}>
-              <div className="content-entry">
+              <div className="content-entry ia-white">
                 <p>
                   Call us at <strong>(718) 749-1830</strong> — our team picks up fast
                   and can answer any question, schedule a same-day visit, or give you

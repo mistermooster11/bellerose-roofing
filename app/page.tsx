@@ -2,6 +2,7 @@ import Hero from "@/components/custom/Hero";
 import HomeSectionWithLine from "@/components/custom/HomeSectionWithLine";
 import Insights from "@/components/custom/Insights";
 import Testimonial from "@/components/custom/Testimonial";
+import HomeCTA from "@/components/custom/HomeCTA";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <HomeSectionWithLine />
         <Insights />
         <Testimonial />
+        <HomeCTA />
       </main>
     </>
   );
