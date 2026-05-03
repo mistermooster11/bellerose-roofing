@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 import { useWowAnimation } from "@/hooks/useWowAnimation";
+import CraftHero from "@/components/custom/craft-catalog/CraftHero";
 
 /* ── Service Area Data ───────────────────────────────────────── */
 
@@ -83,17 +84,14 @@ function SubmitBtn() {
 /* ── Page ────────────────────────────────────────────────────── */
 
 export default function ContactPage() {
-  const heroRef  = useRef<HTMLDivElement>(null);
   const formRef  = useRef<HTMLDivElement>(null);
   const areasRef = useRef<HTMLDivElement>(null);
   const mapRef   = useRef<HTMLDivElement>(null);
 
-  const heroInView  = useInView(heroRef,  { once: true, margin: "0px 0px -60px 0px" });
   const formInView  = useInView(formRef,  { once: true, margin: "0px 0px -60px 0px" });
   const areasInView = useInView(areasRef, { once: true, margin: "0px 0px -60px 0px" });
   const mapInView   = useInView(mapRef,   { once: true, margin: "0px 0px -60px 0px" });
 
-  const heroVis  = heroInView  ? " is-visible" : "";
   const formVis  = formInView  ? " is-visible" : "";
   const areasVis = areasInView ? " is-visible" : "";
   const mapVis   = mapInView   ? " is-visible" : "";
@@ -101,82 +99,12 @@ export default function ContactPage() {
   return (
     <main className="pt-76 max-[1150px]:pt-[6.2rem]">
 
-      {/* ── Hero ─────────────────────────────────────────────────── */}
-      <div className={`hero-org flex-module fadeIn wow${heroVis}`}>
-        <div className="hero-org__top ia-bg-dark">
-          <div className="inner inner--slim-1172">
-            <div className={`breadcrumbs ia-sky fadeInUpS wow${heroVis}`}>
-              <a href="/">Home</a>
-              <em>&gt;</em>
-              <span className="post post-page current-item">Contact Us</span>
-            </div>
-            <h1
-              className={`ia-white ia-margin-0 fadeInUpS wow${heroVis}`}
-              style={{ animationDelay: "0.1s" }}
-            >
-              Get in Touch
-            </h1>
-          </div>
-        </div>
-
-        <div ref={heroRef} className="hero-org__bottom flex-module">
-          <div className="inner inner--slim-1172 cleared">
-
-            {/* Left */}
-            <div className={`hero-org__left fadeInUpS wow${heroVis}`}>
-              <div className="sub-heading">Reach Us</div>
-              <div className="content-entry" style={{ animationDelay: "0.1s" }}>
-                <p>
-                  Call <strong>(718) 749-1830</strong> — most calls are answered
-                  immediately. Same-day scheduling available 7 days a week. Or
-                  fill out the form below and we&apos;ll get back to you within
-                  the hour.
-                </p>
-              </div>
-            </div>
-
-            {/* Right: quick contact links */}
-            <div className="hero-org__right">
-              <div
-                className={`sub-heading fadeInUpS wow${heroVis}`}
-                style={{ animationDelay: "0.1s" }}
-              >
-                Contact Options
-              </div>
-              <ul className="quick-links" role="list">
-                <li
-                  className={`fadeInUpS wow${heroVis}`}
-                  style={{ animationDelay: "0.1s" }}
-                >
-                  <a className="ia-link ia-link--arrow" href="tel:7187491830">
-                    <i className="icon-link" />
-                    <span>Call (718) 749-1830</span>
-                  </a>
-                </li>
-                <li
-                  className={`fadeInUpS wow${heroVis}`}
-                  style={{ animationDelay: "0.2s" }}
-                >
-                  <a className="ia-link ia-link--arrow" href="/general-faqs">
-                    <i className="icon-link" />
-                    <span>View FAQs</span>
-                  </a>
-                </li>
-                <li
-                  className={`fadeInUpS wow${heroVis}`}
-                  style={{ animationDelay: "0.3s" }}
-                >
-                  <a className="ia-link ia-link--arrow" href="/service-areas">
-                    <i className="icon-link" />
-                    <span>Full Service Area Map</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-      </div>
+      {/* ── Hero — image masthead matching service detail pages ── */}
+      <CraftHero
+        title="Contact Us"
+        bgImage="/images/IMG_9688-1024x682.jpg"
+        breadcrumbs={[{ label: "Contact Us" }]}
+      />
 
       {/* ── Contact Form ─────────────────────────────────────────── */}
       <div ref={formRef} className={`content-block-flex flex-module fadeIn wow${formVis}`}>

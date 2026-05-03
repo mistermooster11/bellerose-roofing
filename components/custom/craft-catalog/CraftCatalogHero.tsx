@@ -16,30 +16,25 @@ export default function CraftCatalogHero() {
 
             {/* Text block */}
             <div className="hero-org__text">
-              <h1 className={`ia-white fadeInUpS wow${vis}`}>
-                Craft Catalog
+              <div className={`breadcrumbs ia-sky fadeInUpS wow${vis}`}>
+                <a href="/">Home</a>
+                <em>&gt;</em>
+                <span className="post post-page current-item">Our Services</span>
+              </div>
+              <h1 className={`ia-white fadeInUpS wow${vis}`} style={{ animationDelay: "0.1s" }}>
+                Our Services
               </h1>
               <div
                 className={`content-entry ia-white fadeInUpS wow${vis}`}
-                style={{ transitionDelay: "0.1s" }}
+                style={{ animationDelay: "0.2s" }}
               >
                 <p>
-                  NCCER offers a broad portfolio of curricula that spans a wide
-                  range of construction and maintenance disciplines to ensure
-                  organizations and learners of all backgrounds can find options
-                  to fit their needs.
+                  From backed-up kitchen sinks to full main sewer line clogs, Pipe Monkeys
+                  handles every drain problem in Brooklyn, Queens, and Nassau County. We use
+                  pro-grade equipment, give you upfront pricing, and don&apos;t leave until
+                  the job is done right.
                 </p>
               </div>
-            </div>
-
-            {/* Decorative graphic with vape reveal */}
-            <div className={`hero-org__image vape wow ia-bg-dark${vis}`}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                className="vape-el"
-                src="https://www.nccer.org/wp-content/themes/nccer/assets/images/graphic-logo.png"
-                alt="Logo element"
-              />
             </div>
 
           </div>

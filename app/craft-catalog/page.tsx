@@ -2,9 +2,9 @@ import CraftCatalogHero from "@/components/custom/craft-catalog/CraftCatalogHero
 import CraftCatalogClient from "@/components/custom/craft-catalog/CraftCatalogClient";
 
 export const metadata = {
-  title: "Craft Catalog – NCCER",
+  title: "Our Services – Pipe Monkeys",
   description:
-    "NCCER offers a broad portfolio of curricula that spans a wide range of construction and maintenance disciplines to ensure organizations and learners of all backgrounds can find options to fit their needs.",
+    "Pipe Monkeys offers drain clearing and plumbing services across Brooklyn, Queens, and Nassau County. From kitchen sinks to main sewer lines — same-day service, upfront pricing.",
 };
 
 export default function CraftCatalogPage() {

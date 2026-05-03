@@ -46,26 +46,6 @@ const galleryItems = [
     after:  "/images/IMG_9750-1024x683.jpg",
     category: "Tub & Shower",
   },
-  {
-    id: "gallery-5",
-    label: "Camera Inspection — Multi-Unit, Flushing",
-    beforeAlt: "Camera view showing root intrusion in sewer line",
-    afterAlt:  "Cleared line confirmed via camera after service",
-    // [TODO: Replace with real before/after job photos from Pipe Monkeys]
-    before: "/images/iStock-530983109-1.jpg",
-    after:  "/images/IMG_9688-1024x682.jpg",
-    category: "Camera Inspection",
-  },
-  {
-    id: "gallery-6",
-    label: "Toilet Clog — Levittown, Nassau",
-    beforeAlt: "Overflowing toilet before service",
-    afterAlt:  "Toilet fully cleared and flushing cleanly",
-    // [TODO: Replace with real before/after job photos from Pipe Monkeys]
-    before: "/images/IMG_9750-1024x683.jpg",
-    after:  "/images/iStock-530983109-1.jpg",
-    category: "Toilet",
-  },
 ];
 
 /* ── Sub-components ─────────────────────────────────────────── */
@@ -78,58 +58,73 @@ function GalleryCard({ item, delay }: { item: typeof galleryItems[number]; delay
   return (
     <div
       ref={ref}
-      className={`user-grid-item user-grid-item--three fadeInUpS wow${vis}`}
-      style={{ animationDelay: delay }}
+      className={`fadeInUpS wow${vis}`}
+      style={{
+        animationDelay: delay,
+        background: "#fff",
+        border: "1px solid #e8e8e8",
+        borderRadius: "6px",
+        overflow: "hidden",
+        padding: "2rem",
+      }}
     >
-      <div className="user-grid-item-info">
-        <span
-          className="p3 ia-medium"
-          style={{
-            display: "inline-block",
-            marginBottom: "1rem",
-            padding: "0.3rem 1rem",
-            background: "var(--ia-sky, #a1c5d3)",
-            borderRadius: "4px",
-            fontSize: "1.2rem",
-          }}
-        >
-          {item.category}
-        </span>
+      {/* Category badge */}
+      <span
+        style={{
+          display: "inline-block",
+          marginBottom: "1.5rem",
+          padding: "0.4rem 1.2rem",
+          background: "var(--ia-sky, #a1c5d3)",
+          borderRadius: "4px",
+          fontSize: "1.2rem",
+          fontWeight: 600,
+          color: "#1a2a3a",
+        }}
+      >
+        {item.category}
+      </span>
 
-        {/* Before / After image pair */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.8rem", marginBottom: "1.2rem" }}>
-          <div>
-            <div
-              style={{
-                background: `url(${item.before}) no-repeat 50% 50% / cover`,
-                backgroundColor: "#1a2a3a",
-                height: "16rem",
-                borderRadius: "4px",
-              }}
-              role="img"
-              aria-label={item.beforeAlt}
-            />
-            <p className="p3 ia-dark" style={{ marginTop: "0.5rem", textAlign: "center", fontWeight: 600 }}>Before</p>
-            {/* [TODO: swap image — before photo] */}
-          </div>
-          <div>
-            <div
-              style={{
-                background: `url(${item.after}) no-repeat 50% 50% / cover`,
-                backgroundColor: "#1a2a3a",
-                height: "16rem",
-                borderRadius: "4px",
-              }}
-              role="img"
-              aria-label={item.afterAlt}
-            />
-            <p className="p3 ia-dark" style={{ marginTop: "0.5rem", textAlign: "center", fontWeight: 600 }}>After</p>
-            {/* [TODO: swap image — after photo] */}
-          </div>
+      {/* Before / After image pair — large, equal height */}
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: "1.2rem",
+          marginBottom: "1.5rem",
+        }}
+      >
+        <div>
+          <div
+            style={{
+              background: `url(${item.before}) no-repeat 50% 50% / cover`,
+              backgroundColor: "#1a2a3a",
+              /* tall on desktop, still readable on mobile */
+              aspectRatio: "4 / 3",
+              borderRadius: "4px",
+              width: "100%",
+            }}
+            role="img"
+            aria-label={item.beforeAlt}
+          />
+          <p style={{ marginTop: "0.6rem", textAlign: "center", fontWeight: 700, fontSize: "1.4rem" }}>Before</p>
         </div>
-
-        <h3 className="h6 ia-margin-1">{item.label}</h3>
+        <div>
+          <div
+            style={{
+              background: `url(${item.after}) no-repeat 50% 50% / cover`,
+              backgroundColor: "#1a2a3a",
+              aspectRatio: "4 / 3",
+              borderRadius: "4px",
+              width: "100%",
+            }}
+            role="img"
+            aria-label={item.afterAlt}
+          />
+          <p style={{ marginTop: "0.6rem", textAlign: "center", fontWeight: 700, fontSize: "1.4rem" }}>After</p>
+        </div>
       </div>
+
+      <h3 className="h5 ia-margin-0" style={{ fontSize: "1.8rem" }}>{item.label}</h3>
     </div>
   );
 }
@@ -227,11 +222,23 @@ export default function GalleryPage() {
               lines to root-choked main sewers — we document our work and stand behind every job.
             </p>
           </div>
-          <div className="user-grid-list user-grid-list--small">
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(2, 1fr)",
+              gap: "3rem",
+            }}
+            className="gallery-grid"
+          >
             {galleryItems.map((item, i) => (
-              <GalleryCard key={item.id} item={item} delay={`${(i % 3) * 0.1}s`} />
+              <GalleryCard key={item.id} item={item} delay={`${(i % 2) * 0.1}s`} />
             ))}
           </div>
+          <style>{`
+            @media (max-width: 640px) {
+              .gallery-grid { grid-template-columns: 1fr !important; }
+            }
+          `}</style>
         </div>
       </div>
 
