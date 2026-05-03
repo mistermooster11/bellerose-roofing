@@ -77,12 +77,19 @@ export default function Announcements() {
               </p>
             </div>
 
-            <SecondaryButton
-              href="/contact-us"
-              label="Schedule Service"
-              wow
-              style={{ marginTop: '2.5rem' }}
-            />
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', marginTop: '2.5rem' }}>
+              <SecondaryButton
+                href="/contact-us"
+                label="Schedule Service"
+                wow
+              />
+              <SecondaryButton
+                href="/craft-catalog"
+                label="See All Services"
+                wow
+                delay={100}
+              />
+            </div>
           </div>
 
         </div>
