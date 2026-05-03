@@ -36,27 +36,26 @@ const serviceAreas = [
 function AreaSection({
   area,
   index,
+  vis,
 }: {
   area: (typeof serviceAreas)[number];
   index: number;
+  vis: string;
 }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "0px 0px -60px 0px" });
-  const vis = inView ? " is-visible" : "";
-
   return (
     <div
-      ref={ref}
-      className={`content-block flex-module fadeInUpS wow${vis}`}
-      style={{ animationDelay: `${index * 0.1}s` }}
+      className={`fadeInUpS wow${vis}`}
+      style={{
+        animationDelay: `${index * 0.1}s`,
+        paddingBottom: "2.5rem",
+        borderBottom: "1px solid #e8e8e8",
+      }}
     >
-      <div className="inner inner--slim-1172">
-        <h3 className="h4 ia-margin-1">{area.region}</h3>
-        <p className="p2 ia-dark" style={{ marginBottom: "0.75rem" }}>
-          {area.description}
-        </p>
-        <p className="p3 ia-medium">{area.neighborhoods}</p>
-      </div>
+      <h3 className="h4 ia-margin-1">{area.region}</h3>
+      <p className="p2 ia-dark" style={{ marginBottom: "0.75rem" }}>
+        {area.description}
+      </p>
+      <p className="p3 ia-medium">{area.neighborhoods}</p>
     </div>
   );
 }
@@ -207,7 +206,7 @@ export default function ContactPage() {
       </div>
 
       {/* ── Service Areas (stacked) ───────────────────────────────── */}
-      <div ref={areasRef} className={`flex-module fadeIn wow${areasVis}`}>
+      <div ref={areasRef} className={`content-block-flex flex-module fadeIn wow${areasVis}`}>
         <div className="inner inner--slim-1172">
           <h2
             className={`h3 fadeInUpS wow${areasVis}`}
@@ -225,11 +224,13 @@ export default function ContactPage() {
               certainly do.
             </p>
           </div>
-        </div>
 
-        {serviceAreas.map((area, i) => (
-          <AreaSection key={area.region} area={area} index={i} />
-        ))}
+          <div style={{ display: "flex", flexDirection: "column", gap: "2.5rem" }}>
+            {serviceAreas.map((area, i) => (
+              <AreaSection key={area.region} area={area} index={i} vis={areasVis} />
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* ── Google Map — below all neighborhoods ─────────────────── */}
