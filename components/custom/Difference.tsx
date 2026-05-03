@@ -17,8 +17,8 @@ const stats = [
   {
     stat: "100%",
     label: "Upfront Pricing — You Approve Before We Start",
-    linkText: "How It Works",
-    href: "/#how-it-works",
+    linkText: "See Our Services",
+    href: "/craft-catalog",
   },
 ];
 
