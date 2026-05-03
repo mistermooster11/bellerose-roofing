@@ -8,6 +8,7 @@ interface InsightAccordionDataItemProps {
   item: {
     id: string;
     title: string;
+    image: string;
     learnHref: string;
     steps: AccordionStep[];
   };
@@ -25,6 +26,14 @@ const InsightAccordionDataItem: React.FC<InsightAccordionDataItemProps> = ({
       data-detect={item.id}
       style={{ display: isOpen ? 'block' : 'none' }}
     >
+      <div className="accordion-image">
+        <div
+          className="vape-img"
+          style={{
+            background: `url(${item.image}) no-repeat 50% 50% / cover`,
+          }}
+        />
+      </div>
       <div className="accordion-info" style={{ paddingTop: '0.5rem' }}>
         <p
           style={{
