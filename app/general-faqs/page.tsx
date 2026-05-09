@@ -12,58 +12,62 @@ interface FaqItem {
 
 const faqItems: FaqItem[] = [
   {
-    title: "How quickly can you get here?",
+    title: "Do you offer free estimates?",
     content: (
       <p>
-        Most calls are scheduled the same day, and we offer near-instant
-        response for urgent clogs. Timing depends on your exact neighborhood,
-        but we move fast. Call us at{" "}
-        <a href="tel:7187491830" className="ia-link">(718) 749-1830</a>{" "}
-        and we&apos;ll give you an accurate ETA on the spot.
+        Yes — always. We inspect the roof, siding, or windows, document all
+        damage with photos, and provide a written estimate before any work
+        begins. There&apos;s no charge for the estimate and no pressure to
+        proceed. Call us at{" "}
+        <a href="tel:5163550977" className="ia-link">(516) 355-0977</a>{" "}
+        to schedule.
       </p>
     ),
   },
   {
-    title: "Do you give upfront pricing?",
+    title: "How long has Bellerose Roofing & Siding been in business?",
     content: (
       <p>
-        Always. We diagnose the issue, explain the solution, and give you the
-        price before any work starts. No surprises, no upsell games. What we
-        quote is what you pay — period.
+        We&apos;re a family-owned and operated company with over 35 years of
+        experience in the roofing, siding, and window business. That experience
+        means we&apos;ve seen every type of roof and every type of problem in
+        the New York area — and we know how to price and fix them accurately.
       </p>
     ),
   },
   {
-    title: "What tools do you use to clear drains?",
+    title: "What types of roofs do you repair and install?",
     content: (
       <p>
-        We carry professional cutters, snakes, augers, and hydro-jetting
-        equipment on every truck. Your tech will choose the safest and most
-        effective method for your specific line and problem — and explain why
-        before starting.
+        We work on all major residential and commercial roofing types, including
+        asphalt shingle, ceramic tile, synthetic slate, and rubber (EPDM).
+        Whether you need a few shingles replaced or a full tear-off and new
+        install, we handle it. We&apos;ll assess the roof and recommend the
+        most cost-effective approach for your situation.
       </p>
     ),
   },
   {
-    title: "When should I consider hydro jetting instead of snaking?",
+    title: "Do I need a full roof replacement or just a repair?",
     content: (
       <p>
-        Snaking clears a path through the clog. Jetting actually scrubs grease,
-        scale, and buildup off the pipe walls — giving you a cleaner line and
-        much longer-lasting results. If you get repeat clogs in the same drain,
-        jetting is usually the right call. We&apos;ll tell you honestly which
-        one makes sense for your situation.
+        We&apos;ll give you an honest answer during the free inspection —
+        including photos of every problem area. If the roof is repairable
+        and repair is the smarter financial choice, that&apos;s what we&apos;ll
+        recommend. If replacement is more cost-effective, we&apos;ll explain
+        why and walk you through your material options. We have no incentive
+        to oversell you.
       </p>
     ),
   },
   {
-    title: "Do you service apartments and multi-unit buildings?",
+    title: "Are you licensed and insured?",
     content: (
       <p>
-        All the time. We work with brownstones, pre-war buildings, walk-ups,
-        condos, co-ops, and multi-family homes across Brooklyn, Queens, and
-        Nassau County every day. We coordinate with building managers and work
-        to minimize disruption to other tenants.
+        Yes — fully licensed and insured in New York City, Nassau County, and
+        Suffolk County. NYC License #1259922 &bull; Nassau License #H18B8620000
+        &bull; Floral Park License #119. We&apos;re happy to provide
+        documentation on request.
       </p>
     ),
   },
@@ -71,35 +75,48 @@ const faqItems: FaqItem[] = [
     title: "What areas do you serve?",
     content: (
       <>
-        <p>We serve all of Brooklyn, Queens, and Nassau County including:</p>
         <p>
-          <strong>Brooklyn:</strong> Williamsburg, Greenpoint, Bushwick,
-          Bed-Stuy, Crown Heights, Park Slope, Sunset Park, Bay Ridge,
-          Bensonhurst, Dyker Heights, Gravesend, Sheepshead Bay, Coney Island
-          and more.
+          We serve the full New York City 5 boroughs (Queens, Brooklyn,
+          Manhattan, the Bronx, and Staten Island), Nassau County, and Suffolk
+          County. Some of the neighborhoods and towns we frequently work in:
         </p>
         <p>
-          <strong>Queens:</strong> Astoria, LIC, Maspeth, Flushing, Whitestone,
-          Bayside, Forest Hills, Rego Park, Jackson Heights, Elmhurst, Middle
-          Village and more.
+          <strong>Queens:</strong> Floral Park, Jamaica, Bayside, Flushing,
+          Forest Hills, Rego Park, Astoria, Woodside, Jackson Heights, Middle
+          Village, and more.
         </p>
         <p>
-          <strong>Nassau County:</strong> Valley Stream, Elmont, Franklin
-          Square, West Hempstead, Hempstead, Garden City, Mineola, New Hyde
-          Park, Rockville Centre, Oceanside, Freeport, Merrick, Bellmore,
-          Levittown, East Meadow and more.
+          <strong>Nassau County:</strong> Valley Stream, Elmont, New Hyde Park,
+          Garden City, Hempstead, Mineola, Rockville Centre, Lynbrook, Malverne,
+          Hewlett, and more.
+        </p>
+        <p>
+          <strong>Suffolk County:</strong> Call us to confirm coverage in your
+          area — we cover a wide range of Suffolk towns.
         </p>
       </>
     ),
   },
   {
-    title: "Do you clean up after the job?",
+    title: "What happens if an issue comes up mid-project?",
     content: (
       <p>
-        Yes — always. Every tech wears shoe covers, lays down drop cloths, and
-        cleans the workspace before leaving. We test the flow, show you the
-        results, and make sure your home is cleaner than we found it. That
-        &apos;s not a bonus — it&apos;s standard.
+        We discuss it with you and explain your options before proceeding. We
+        never make decisions for you or add charges to a job without your
+        knowledge and approval. You stay involved and informed every step of the
+        way — that&apos;s been our approach for 35 years.
+      </p>
+    ),
+  },
+  {
+    title: "Do you do commercial roofing?",
+    content: (
+      <p>
+        Yes. We handle both residential and commercial roofing and siding work
+        across the 5 boroughs, Nassau, and Suffolk. Call{" "}
+        <a href="tel:5163550977" className="ia-link">(516) 355-0977</a>{" "}
+        to discuss your project and we&apos;ll let you know if we&apos;re the
+        right fit.
       </p>
     ),
   },
@@ -197,7 +214,7 @@ export default function GeneralFaqsPage() {
             <div className={`front-donation__in wow fadeInUpS${donationInView ? " is-visible" : ""}`} style={{ animationDelay: "0.2s" }}>
               <div className="content-entry">
                 <p>
-                  Call us at <strong>(718) 749-1830</strong> — our team picks up fast
+                  Call us at <strong>(516) 355-0977</strong> — our team picks up fast
                   and can answer any question, schedule a same-day visit, or give you
                   an honest assessment over the phone.
                 </p>
@@ -205,8 +222,8 @@ export default function GeneralFaqsPage() {
               <div className="front-donation__btn-wrap">
                 <div className="front-donation__btn">
                   <SecondaryButton
-                    label="Call (718) 749-1830"
-                    href="tel:7187491830"
+                    label="Call (516) 355-0977"
+                    href="tel:5163550977"
                   />
                 </div>
               </div>

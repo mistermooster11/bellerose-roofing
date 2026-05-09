@@ -29,10 +29,9 @@ export default function CraftCatalogHero() {
                 style={{ animationDelay: "0.2s" }}
               >
                 <p>
-                  From backed-up kitchen sinks to full main sewer line clogs, Pipe Monkeys
-                  handles every drain problem in Brooklyn, Queens, and Nassau County. We use
-                  pro-grade equipment, give you upfront pricing, and don&apos;t leave until
-                  the job is done right.
+                  From storm-damaged shingles to full roofing tear-offs, Bellerose Roofing &amp; Siding
+                  handles all exterior work across Queens, the 5 boroughs, Nassau, and Suffolk County.
+                  Free estimates, honest pricing, and 35+ years of experience behind every job.
                 </p>
               </div>
             </div>

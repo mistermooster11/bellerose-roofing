@@ -11,10 +11,8 @@ const quickLinks = [
   { label: "Contact Us",                 href: "/contact-us",      external: false },
 ];
 
-const socials = [
-  { icon: "icon-facebook",   href: "https://www.facebook.com/pipemonkeys",  label: "Facebook"  },
-  { icon: "icon-instagram",  href: "https://www.instagram.com/pipemonkeys", label: "Instagram" },
-];
+// TODO: Add Bellerose Roofing & Siding social media URLs when available
+const socials: { icon: string; href: string; label: string }[] = [];
 
 export default function Footer() {
   const ref = useRef<HTMLElement>(null);
@@ -30,11 +28,11 @@ export default function Footer() {
         {/* Logo */}
         <div className={`footer__logo fadeInUpS wow${vis}`}>
           <a href="/">
-            <span className="sr-only">Pipe Monkeys</span>
-            {/* [TODO: Replace with Pipe Monkeys logo] */}
+            <span className="sr-only">Bellerose Roofing &amp; Siding</span>
+            {/* [TODO: Replace with Bellerose Roofing & Siding logo] */}
             <img
               src="/logos/logo-long.svg"
-              alt="Pipe Monkeys Drain & Sewer"
+              alt="Bellerose Roofing & Siding"
               width="220"
               height="48"
             />
@@ -66,14 +64,13 @@ export default function Footer() {
             <h3 className="footer__heading">Contact Us</h3>
             <div className="content-entry">
               <p>
-                <strong>(718) 749-1830</strong><br />
-                Brooklyn, Queens &amp; Nassau County<br />
-                {/* [TODO: Add business hours] */}
-                Mon–Sat: 7am–8pm &bull; Sun: Emergency Only
+                <strong>(516) 355-0977</strong><br />
+                92 Chestnut Ave, Floral Park, NY 11001<br />
+                Mon–Fri: 8am–6pm &bull; Sat &amp; Sun: By Appointment
               </p>
             </div>
             <a
-              href="tel:7187491830"
+              href="tel:5163550977"
               className={`ia-link ia-link--arrow ia-link--white wow${vis}`}
             >
               <i className="icon-arrow-right ia-orange" />
@@ -89,9 +86,8 @@ export default function Footer() {
             <h3 className="footer__heading">Service Areas</h3>
             <div className="content-entry">
               <p>
-                Brooklyn &bull; Queens &bull; Nassau County<br />
-                All neighborhoods — if you&apos;re not sure,
-                just call. We almost certainly cover your area.
+                Queens &bull; All 5 Boroughs &bull; Nassau County &bull; Suffolk County<br />
+                Fully licensed &amp; insured in NYC, Nassau, and Suffolk.
               </p>
             </div>
             <a
@@ -111,7 +107,7 @@ export default function Footer() {
         <div className={`footer__bottom cleared fadeInUpS wow${vis}`}>
 
           <div className="footer__bottom__left">
-            &copy;2026 Pipe Monkeys. All rights reserved.
+            &copy;2026 Bellerose Roofing &amp; Siding. All rights reserved.
           </div>
 
           <div className="footer__bottom__center">

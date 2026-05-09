@@ -28,7 +28,7 @@ export default function Announcements() {
 
         <div className="front-announcements__inner">
           <div className="sub-heading">How It Works</div>
-          <h3 className="h3">Fast, Clean, and Priced Up Front</h3>
+          <h3 className="h3">Honest Estimates. Quality Work. No Surprises.</h3>
         </div>
 
         <div className="relative z-20 front-announcements__content">
@@ -49,7 +49,7 @@ export default function Announcements() {
                   backgroundColor: '#101d2b',
                 }}
               />
-              {/* [TODO: Replace with Pipe Monkeys team or job site photo] */}
+              {/* [TODO: Replace with Bellerose Roofing & Siding job site or team photo] */}
             </div>
           </div>
 
@@ -57,30 +57,32 @@ export default function Announcements() {
           <div className="front-announcements__text">
             <div className="content-entry">
               <p>
-                Every call starts the same way: we show up, diagnose the problem in front
-                of you, explain exactly what needs to happen, and give you the price before
-                a single tool touches your drain. No guessing, no surprise invoices — just
-                a straight answer and a plan.
+                Every project starts the same way: we assess the job honestly, explain
+                exactly what needs to happen, and give you a written estimate before any
+                work begins. We&rsquo;ve been doing this for 35 years — we know how to
+                price a job accurately and get it done right.
               </p>
               <p>
-                <strong>Step 1: Diagnose.</strong> Our tech assesses the blockage and
-                identifies the right tool for the job — snake, auger, or hydro jet.
+                <strong>Step 1: Free Inspection.</strong> We assess the roof, siding, or
+                windows and document all damage with photos. You know what we found before
+                any work starts.
               </p>
               <p>
-                <strong>Step 2: Approve &amp; Clear.</strong> You get the price first.
-                Once you&apos;re ready, we go to work. Most jobs are done in under an hour.
+                <strong>Step 2: Written Estimate.</strong> You get a detailed, accurate
+                quote. If an issue comes up mid-project, we discuss it with you and explain
+                your options — no surprises at billing.
               </p>
               <p>
-                <strong>Step 3: Confirm &amp; Clean Up.</strong> We test the flow in front
-                of you, clean the work area, and don&apos;t leave until the drain is
-                fully clear.
+                <strong>Step 3: Quality Install &amp; Cleanup.</strong> Our crew does the
+                work right and hauls away all debris before leaving. Free anti-mold and
+                anti-moss strips included on every roofing job.
               </p>
             </div>
 
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', marginTop: '2.5rem' }}>
               <SecondaryButton
                 href="/contact-us"
-                label="Schedule Service"
+                label="Get a Free Estimate"
                 wow
               />
               <SecondaryButton

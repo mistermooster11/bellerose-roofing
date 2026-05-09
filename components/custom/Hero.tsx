@@ -27,7 +27,7 @@ export default function Hero() {
               visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-full',
             ].join(' ')}
           >
-            Brooklyn, Queens &amp; Nassau County Drain Clearing
+            Queens &amp; Long Island Roofing, Siding &amp; Windows
           </h1>
 
           <div className="flex justify-start pb-20 max-[767px]:block max-[767px]:pb-8">
@@ -41,15 +41,15 @@ export default function Hero() {
               ].join(' ')}
             >
               <p className="text-[1.9rem] leading-[1.6]">
-                From sinks to main lines, we clear tough clogs across Brooklyn,
-                Queens and Nassau County with pro gear and zero stress.
-                Upfront pricing. Family owned. Local NYC techs.
+                Family-owned and operated for over 35 years. Roofing repairs,
+                full installs, siding, and windows across the 5 boroughs,
+                Nassau, and Suffolk County. Licensed &amp; insured. Free estimates.
               </p>
             </div>
 
             <PrimaryButton
-              label="Call (718) 749-1830"
-              href="tel:7187491830"
+              label="Call (516) 355-0977"
+              href="tel:5163550977"
               dark
               wow
               visible={visible}
@@ -108,7 +108,7 @@ export default function Hero() {
                   visible ? 'h-full scale-100' : 'h-0 scale-[1.2]',
                 ].join(' ')}
               >
-                {/* TODO: Replace src with a Pipe Monkeys hero image or video */}
+                {/* TODO: Replace src with a Bellerose Roofing & Siding hero image or video */}
                 <video
                   loop
                   autoPlay

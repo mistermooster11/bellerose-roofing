@@ -42,9 +42,10 @@ export const programsData: ProgramsPageData = {
     title: "Our Services",
     description: (
       <p>
-        Pipe Monkeys handles every type of drain and sewer issue across
-        Brooklyn, Queens, and Nassau County — from a slow kitchen sink to a
-        fully blocked main line.
+        Bellerose Roofing &amp; Siding handles all types of exterior work across
+        the 5 boroughs, Nassau County, and Suffolk County — from emergency roof
+        repairs to complete roofing tear-offs, siding replacements, and window
+        installs.
       </p>
     ),
     breadcrumbParentLabel: "Services",
@@ -55,17 +56,16 @@ export const programsData: ProgramsPageData = {
     content: (
       <>
         <p>
-          Every job starts the same way: we diagnose the problem, explain the
-          solution in plain language, and give you the price before any work
-          begins. Our techs carry professional-grade cutters, snakes, augers,
-          and hydro-jetting equipment — so whatever the line throws at us,
-          we&rsquo;re ready.
+          Every job starts with an honest assessment and a written estimate you
+          approve before any work begins. We&rsquo;ve been doing this for over
+          35 years in the New York area — we know what each roof type needs,
+          what holds up in this climate, and how to deliver quality work at fair
+          pricing without cutting corners.
         </p>
         <p>
-          We work in residential homes, brownstones, pre-war walk-ups, condos,
-          and multi-family buildings. Same-day scheduling available. Near-instant
-          response for emergencies. Call{" "}
-          <a href="tel:7187491830">(718) 749-1830</a> to get started.
+          Fully licensed and insured in NYC, Nassau, and Suffolk. Call{" "}
+          <a href="tel:5163550977">(516) 355-0977</a> to get started with a
+          free estimate.
         </p>
       </>
     ),
@@ -76,101 +76,60 @@ export const programsData: ProgramsPageData = {
 
   programs: [
     {
-      title: "Main Sewer Line Clearing",
+      title: "Roofing Repairs",
       content: (
         <p>
-          Roots, scale, grease buildup, and heavy blockages in the main line
-          require pro-level equipment — not a standard snake from the hardware
-          store. Our techs use industrial cutters and jetting to restore full
-          flow to your main sewer line and confirm it before leaving. We handle
-          this every day in Brooklyn brownstones, Queens multi-families, and
-          Nassau County homes with long sewer runs.
+          We repair roofs of many different styles — asphalt shingle, ceramic
+          tile, synthetic slate, and rubber. Whether you have a few missing
+          shingles after a storm or a persistent leak, we inspect the full roof,
+          document all damage with photos, and repair what&rsquo;s actually
+          wrong. We also include free anti-mold and anti-moss strips as a
+          thank-you for choosing Bellerose.
         </p>
       ),
-      learnMoreHref: "/craft-catalog/main-sewer-lines",
+      learnMoreHref: "/craft-catalog/roofing-repairs",
     },
     {
-      title: "Kitchen Sink Drain Clearing",
+      title: "Siding Repairs",
       content: (
         <p>
-          Grease, food debris, and soap scum are the most common kitchen culprits
-          — and they build up fast in NYC buildings with heavy daily use. We
-          clear kitchen drains using professional cutters and hydro jetting
-          depending on the severity, leaving the line fully open and grease-free.
-          No mess, no damage to pipes, and no recurring clogs if you go with
-          jetting.
+          From repairing rotten wood siding to replacing cracked or missing
+          vinyl panels, we handle all types of exterior siding work. New siding
+          protects your home from the elements and can add thousands to your
+          home&rsquo;s resale value. We match existing materials closely on
+          partial replacements and help you choose the right product for full
+          replacements.
         </p>
       ),
-      learnMoreHref: "/craft-catalog/kitchen-sinks",
+      learnMoreHref: "/craft-catalog/siding-repairs",
     },
     {
-      title: "Tub & Shower Drain Clearing",
+      title: "Roofing Tear-Offs & New Installs",
       content: (
         <p>
-          Hair, soap buildup, and mineral deposits accumulate silently until
-          you&rsquo;re standing in ankle-deep water. Our techs remove the
-          blockage cleanly — no torn-up tile, no chemical damage to pipes — and
-          leave the bathroom exactly as they found it. Shoe covers and drop
-          cloths every time.
+          When repair isn&rsquo;t cost-effective, we tear off the old system
+          down to the deck, inspect and repair the decking, and install a
+          fully new roof. We help you upgrade to a more energy-efficient roof
+          and handle the entire process — from material selection to final
+          cleanup. Debris fully hauled away.
         </p>
       ),
-      learnMoreHref: "/craft-catalog/tubs-and-showers",
+      learnMoreHref: "/craft-catalog/roofing-tearoffs-and-installs",
     },
     {
-      title: "Toilet Clog Clearing",
+      title: "Windows & Skylights",
       content: (
         <p>
-          Stubborn toilet clogs — including foreign objects, excessive paper,
-          and hard-to-reach blockages — are cleared fast with the right auger
-          and technique. We&rsquo;ve retrieved everything from children&rsquo;s
-          toys to full pipe obstructions. No splash, no stress, and we test the
-          flush before we leave.
+          Want more natural light in your home? Ready to replace drafty,
+          energy-wasting windows? We install windows and skylights across the
+          5 boroughs, Nassau, and Suffolk County. Proper flashing and sealing
+          on every install — skylights done right never leak.
         </p>
       ),
-      learnMoreHref: "/craft-catalog/toilets",
-    },
-    {
-      title: "Hydro Jetting",
-      content: (
-        <p>
-          Snaking clears a path through the clog. Hydro jetting actually scrubs
-          grease, scale, and buildup off the pipe walls — giving you a like-new
-          interior and dramatically reducing repeat clogs. If you&rsquo;ve been
-          dealing with the same drain backing up every few months, jetting is
-          the long-term fix. Available for kitchen lines, main sewer lines, and
-          commercial buildings.
-        </p>
-      ),
-      learnMoreHref: "/craft-catalog/hydro-jetting",
-    },
-    {
-      title: "Camera Inspection",
-      content: (
-        <p>
-          Before we recommend a repair or jetting service on your main line, we
-          can run a camera to show you exactly what&rsquo;s in there — root
-          intrusion, pipe damage, grease buildup, or collapsed sections. You see
-          what we see, in real time, so there&rsquo;s no guesswork and no
-          upselling on work you don&rsquo;t need.
-        </p>
-      ),
-      learnMoreHref: "/craft-catalog/camera-inspection",
-    },
-    {
-      title: "Multi-Unit & Commercial Buildings",
-      content: (
-        <p>
-          We work with brownstones, pre-war walk-ups, condos, co-ops, and
-          multi-family buildings across Brooklyn and Queens every single day.
-          Stack drain issues, shared main lines, and building-wide backups are
-          all in our wheelhouse. We coordinate with building managers and
-          minimize disruption to tenants throughout the job.
-        </p>
-      ),
-      learnMoreHref: "/craft-catalog/multi-unit-buildings",
+      learnMoreHref: "/craft-catalog/windows-and-skylights",
     },
   ],
 
-  // No external partners — use service area neighborhoods instead
+  // No external partners for this trade client
   partners: [],
 };

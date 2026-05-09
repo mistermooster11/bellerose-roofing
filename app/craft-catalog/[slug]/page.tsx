@@ -22,8 +22,8 @@ export async function generateMetadata({
   const data = servicePages[slug];
   if (!data) return {};
   return {
-    title: `${data.title} — Pipe Monkeys`,
-    description: `Professional ${data.title.toLowerCase()} service in Brooklyn, Queens, and Nassau County. Upfront pricing, same-day scheduling, guaranteed results.`,
+    title: `${data.title} — Bellerose Roofing & Siding`,
+    description: `Professional ${data.title.toLowerCase()} across Queens, NYC, Nassau & Suffolk County. Free estimates, honest pricing, 35+ years of experience.`,
   };
 }
 
@@ -84,12 +84,12 @@ export default async function ServiceDetailPage({
               <div className="inner">
                 <div className="content-entry p3">
                   <p>
-                    <strong>Ready to book?</strong>{" "}
+                    <strong>Ready to get a free estimate?</strong>{" "}
                     Call{" "}
-                    <a href="tel:7187491830">(718) 749-1830</a>{" "}
-                    for same-day scheduling, or{" "}
+                    <a href="tel:5163550977">(516) 355-0977</a>{" "}
+                    or{" "}
                     <a href="/contact-us">send us a message online</a>.
-                    We give you a price before we start — no surprises.
+                    Written estimate before any work begins — no surprises.
                   </p>
                 </div>
               </div>
@@ -100,9 +100,9 @@ export default async function ServiceDetailPage({
             <RelatedCrafts
               description={
                 <p>
-                  Pipe Monkeys handles every type of drain and sewer problem
-                  across Brooklyn, Queens, and Nassau County. Explore our other
-                  services below.
+                  Bellerose Roofing &amp; Siding handles all types of exterior work
+                  across Queens, the 5 boroughs, Nassau, and Suffolk County. Explore
+                  our other services below.
                 </p>
               }
               crafts={data.relatedServices}

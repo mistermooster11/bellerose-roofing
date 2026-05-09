@@ -19,9 +19,9 @@ export type ServicePageData = {
 
 export const servicePages: Record<string, ServicePageData> = {
 
-  /* ─── MAIN SEWER LINES ─────────────────────────────────────────────────── */
-  "main-sewer-lines": {
-    title: "Main Sewer Lines",
+  /* ─── ROOFING REPAIRS ───────────────────────────────────────────────────── */
+  "roofing-repairs": {
+    title: "Roofing Repairs",
     bgColor: "#101d2b",
     navItems: [
       { href: "#overview",          label: "Overview"          },
@@ -32,39 +32,42 @@ export const servicePages: Record<string, ServicePageData> = {
     overviewContent: (
       <>
         <p>
-          When the main sewer line backs up, every drain in the building stops
-          working. These blockages — caused by root intrusion, grease and scale
-          buildup, or decades of accumulation — require industrial-grade equipment
-          that goes beyond what a standard snake can handle.
+          Bellerose Roofing &amp; Siding specializes in repairing roofs of many
+          different styles, including asphalt shingle, ceramic tile, synthetic
+          slate, and rubber. With over 35 years of experience in the NYC metro
+          area, we know exactly how local weather, freeze-thaw cycles, and aging
+          affect each roof type.
         </p>
         <p>
-          Pipe Monkeys techs clear main sewer lines in Brooklyn brownstones, Queens
-          multi-family buildings, and Nassau County homes with long underground
-          runs — every single day.
+          Whether you have a few missing shingles after a storm or a persistent
+          leak you can&rsquo;t find the source of, we diagnose the full roof —
+          not just the obvious damage — and repair what&rsquo;s actually wrong.
         </p>
       </>
     ),
     overviewQuickLinks: [
-      { label: "Call (718) 749-1830", href: "tel:7187491830"   },
-      { label: "Contact Us Online",   href: "/contact-us"      },
+      { label: "Call (516) 355-0977", href: "tel:5163550977" },
+      { label: "Contact Us Online",   href: "/contact-us"    },
     ],
     sections: [
       {
         id: "when_you_need_it",
-        heading: "When Do You Need Main Line Service?",
+        heading: "When Do You Need a Roof Repair?",
         content: (
           <>
             <p>
-              Multiple drains backing up at once is the clearest sign your main
-              sewer line is blocked — not just a single fixture. Other warning signs
-              include gurgling sounds from drains, slow flow on every floor of the
-              building, sewage odors, or water backing up in the tub when you flush
-              the toilet.
+              Missing or curling shingles, flashing that has pulled away from
+              chimneys or walls, water stains on interior ceilings, granules in
+              gutters, and visible daylight in the attic are all signs that your
+              roof needs professional attention. Small problems left unaddressed
+              become major water damage quickly — especially during New York
+              winters.
             </p>
             <p>
-              These symptoms don&rsquo;t clear on their own. The longer a main line
-              blockage sits, the higher the risk of a sewage backup into the basement
-              or lower-level units. Call us as soon as these signs appear.
+              We also repair roofs after storm damage. If you&rsquo;ve had a
+              major wind or hail event, call us for an inspection before filing
+              an insurance claim — we document all damage with photos and can
+              advise on what qualifies.
             </p>
           </>
         ),
@@ -75,41 +78,40 @@ export const servicePages: Record<string, ServicePageData> = {
         content: (
           <>
             <p>
-              <strong>Step 1 — Diagnose.</strong> We assess the situation before
-              any tools go in. For main line jobs, we confirm the blockage location
-              and severity and recommend a camera inspection when the cause isn&rsquo;t
-              obvious.
+              <strong>Step 1 — Free Inspection.</strong> We assess the full
+              roof, not just the visible damage, and document everything with
+              photos. You know exactly what we found before any work begins.
             </p>
             <p>
-              <strong>Step 2 — Quote Upfront.</strong> You get the price before
-              we start — no surprises. What we quote is what you pay.
+              <strong>Step 2 — Honest Estimate.</strong> We provide a detailed
+              written estimate with no hidden charges. Our decades of experience
+              mean our quotes are accurate — no unpleasant surprises at billing.
             </p>
             <p>
-              <strong>Step 3 — Clear It.</strong> We use industrial electric cutters
-              and hydro jetting equipment to break through and flush out root masses,
-              grease plugs, and heavy scale. We don&rsquo;t leave until flow is fully
-              restored.
+              <strong>Step 3 — Repair.</strong> Our crew handles the repair
+              with quality materials. If an issue comes up mid-job, we discuss it
+              with you and explain your options before proceeding.
             </p>
             <p>
-              <strong>Step 4 — Confirm and Clean Up.</strong> We run water through
-              to verify full flow, show you the result, and leave the area cleaner
-              than we found it. Shoe covers and drop cloths on every job.
+              <strong>Step 4 — Cleanup &amp; Walkthrough.</strong> We haul away
+              all debris and do a final walkthrough with you so you can see the
+              completed work. We also include free anti-mold and anti-moss strips
+              as a thank-you for choosing Bellerose.
             </p>
           </>
         ),
       },
     ],
     relatedServices: [
-      { label: "Camera Inspection",         href: "/craft-catalog/camera-inspection"    },
-      { label: "Hydro Jetting",             href: "/craft-catalog/hydro-jetting"        },
-      { label: "Drain Snaking & Augering",  href: "/craft-catalog/drain-snaking"        },
-      { label: "Multi-Unit Buildings",      href: "/craft-catalog/multi-unit-buildings" },
+      { label: "Roofing Tear-Offs & New Installs", href: "/craft-catalog/roofing-tearoffs-and-installs" },
+      { label: "Siding Repairs",                   href: "/craft-catalog/siding-repairs"               },
+      { label: "Windows & Skylights",              href: "/craft-catalog/windows-and-skylights"        },
     ],
   },
 
-  /* ─── KITCHEN SINKS ────────────────────────────────────────────────────── */
-  "kitchen-sinks": {
-    title: "Kitchen Sinks",
+  /* ─── SIDING REPAIRS ────────────────────────────────────────────────────── */
+  "siding-repairs": {
+    title: "Siding Repairs",
     bgColor: "#101d2b",
     navItems: [
       { href: "#overview",          label: "Overview"         },
@@ -120,39 +122,39 @@ export const servicePages: Record<string, ServicePageData> = {
     overviewContent: (
       <>
         <p>
-          Grease, food debris, and soap scum are the three main kitchen drain
-          killers — and in New York City buildings with heavy daily use, they
-          build up faster than anywhere else. A slow kitchen sink almost always
-          means the problem is already significant inside the pipe.
+          From repairing rotten wood siding to replacing cracked or missing
+          vinyl panels, Bellerose Roofing &amp; Siding handles all types of
+          exterior siding work across the 5 boroughs, Nassau, and Suffolk
+          County. New siding not only protects your home from the elements —
+          it can add thousands to resale value.
         </p>
         <p>
-          Pipe Monkeys clears kitchen drains across Brooklyn, Queens, and Nassau
-          County using professional snakes and hydro jetting, depending on the
-          severity. No mess, no chemical damage to pipes.
+          We&rsquo;ve been doing siding work in New York for over 35 years and
+          understand exactly what holds up in this climate and what doesn&rsquo;t.
         </p>
       </>
     ),
     overviewQuickLinks: [
-      { label: "Call (718) 749-1830", href: "tel:7187491830" },
+      { label: "Call (516) 355-0977", href: "tel:5163550977" },
       { label: "Contact Us Online",   href: "/contact-us"    },
     ],
     sections: [
       {
         id: "when_you_need_it",
-        heading: "When Do You Need Kitchen Drain Service?",
+        heading: "When Do You Need Siding Repair?",
         content: (
           <>
             <p>
-              A kitchen drain that drains slowly, backs up under the sink, or
-              emits a persistent odor is telling you grease or debris has
-              accumulated in the line. In buildings with garbage disposals, the
-              buildup accelerates — and chemical drain cleaners can actually make
-              the long-term problem worse by softening older pipes.
+              Warping, cracking, or buckling panels, visible rot or soft spots,
+              paint that keeps peeling no matter how often you repaint, and
+              noticeably higher energy bills are all signs that your siding is
+              failing. Damaged siding allows water to get behind the exterior
+              wall, which leads to mold, rot, and structural damage over time.
             </p>
             <p>
-              Don&rsquo;t wait until the sink stops draining completely. Early
-              intervention is cheaper, faster, and keeps standing water and odors
-              out of your kitchen.
+              Even a few damaged panels should be addressed quickly — moisture
+              infiltration spreads fast in New York&rsquo;s climate, especially
+              during the freeze-thaw cycles of late fall and early spring.
             </p>
           </>
         ),
@@ -163,40 +165,39 @@ export const servicePages: Record<string, ServicePageData> = {
         content: (
           <>
             <p>
-              <strong>Step 1 — Diagnose.</strong> We look at the sink, check
-              under the cabinet, and assess how far the blockage has progressed.
-              We&rsquo;ll tell you whether snaking or jetting is the right call
-              and why.
+              <strong>Step 1 — Assess.</strong> We inspect the siding and the
+              wall behind it for any signs of moisture damage before beginning
+              repair. We don&rsquo;t just replace panels over a wet wall.
             </p>
             <p>
-              <strong>Step 2 — Quote Upfront.</strong> Price is confirmed before
-              any work begins. No bait-and-switch.
+              <strong>Step 2 — Estimate.</strong> You get an honest, written
+              estimate before any work starts — broken down by material and labor
+              so there are no surprises.
             </p>
             <p>
-              <strong>Step 3 — Clear It.</strong> For grease buildup, hydro
-              jetting scrubs the pipe walls clean — reducing the chance of a
-              repeat clog. For straightforward blockages, a professional electric
-              snake breaks it up fast and gets the line flowing.
+              <strong>Step 3 — Repair or Replace.</strong> We match existing
+              siding material as closely as possible when doing partial
+              replacements. For full replacements, we help you select a material
+              and profile that suits your home and budget.
             </p>
             <p>
-              <strong>Step 4 — Test and Clean Up.</strong> We run hot water to
-              confirm full drainage and wipe down the work area before we leave.
+              <strong>Step 4 — Inspect &amp; Clean Up.</strong> We do a final
+              walkthrough with you and haul away all debris before leaving.
             </p>
           </>
         ),
       },
     ],
     relatedServices: [
-      { label: "Hydro Jetting",            href: "/craft-catalog/hydro-jetting"       },
-      { label: "Drain Snaking & Augering", href: "/craft-catalog/drain-snaking"       },
-      { label: "Main Sewer Lines",         href: "/craft-catalog/main-sewer-lines"    },
-      { label: "Multi-Unit Buildings",     href: "/craft-catalog/multi-unit-buildings"},
+      { label: "Roofing Repairs",              href: "/craft-catalog/roofing-repairs"             },
+      { label: "Roofing Tear-Offs & Installs", href: "/craft-catalog/roofing-tearoffs-and-installs" },
+      { label: "Windows & Skylights",          href: "/craft-catalog/windows-and-skylights"       },
     ],
   },
 
-  /* ─── TUBS & SHOWERS ───────────────────────────────────────────────────── */
-  "tubs-and-showers": {
-    title: "Tubs & Showers",
+  /* ─── ROOFING TEAR-OFFS & NEW INSTALLS ─────────────────────────────────── */
+  "roofing-tearoffs-and-installs": {
+    title: "Roofing Tear-Offs & New Installs",
     bgColor: "#101d2b",
     navItems: [
       { href: "#overview",          label: "Overview"         },
@@ -207,38 +208,42 @@ export const servicePages: Record<string, ServicePageData> = {
     overviewContent: (
       <>
         <p>
-          Hair, soap residue, and mineral deposits accumulate silently inside tub
-          and shower drains until you&rsquo;re standing in ankle-deep water. The
-          fix is straightforward — but done wrong, it damages tile, p-traps, or
-          the drain body itself.
+          When repair isn&rsquo;t cost-effective, Bellerose Roofing &amp; Siding
+          tears off the old roof down to the deck and installs a fully new
+          system — with a deck inspection included. A new roof is one of the
+          best investments a homeowner can make, offering improved energy
+          efficiency, lower insurance rates, and decades of protection.
         </p>
         <p>
-          Pipe Monkeys removes bathroom drain blockages cleanly and carefully, with
-          shoe covers and drop cloths on every job. Your bathroom goes back to normal
-          — or better.
+          We install all major roofing types and can help you select the right
+          material for your home, budget, and local climate. Fully licensed and
+          insured across NYC, Nassau, and Suffolk.
         </p>
       </>
     ),
     overviewQuickLinks: [
-      { label: "Call (718) 749-1830", href: "tel:7187491830" },
+      { label: "Call (516) 355-0977", href: "tel:5163550977" },
       { label: "Contact Us Online",   href: "/contact-us"    },
     ],
     sections: [
       {
         id: "when_you_need_it",
-        heading: "When Do You Need Tub & Shower Drain Service?",
+        heading: "When Is a Full Replacement the Right Call?",
         content: (
           <>
             <p>
-              Standing water in the tub, a drain that takes minutes to clear after
-              a shower, or a persistent musty smell from the drain are all signs of a
-              buildup that a plunger won&rsquo;t fix. In older NYC buildings, mineral
-              deposits from hard water compound the problem — narrowing pipes gradually
-              until they nearly close off.
+              If your roof is 20+ years old, has been repaired multiple times, or
+              has sustained damage across a large portion of the surface, a full
+              replacement is typically more cost-effective than continued repairs.
+              We&rsquo;ll give you an honest assessment during the free inspection
+              — including photos of every problem area — so you can make a fully
+              informed decision.
             </p>
             <p>
-              If you&rsquo;ve already tried drain cleaning solutions without results,
-              the clog is past the point of DIY. Call us.
+              We also recommend replacement when an older roof is preventing a
+              homeowner from qualifying for homeowners insurance, or when the
+              existing roof is covering structural deck damage that needs to be
+              addressed to prevent future failure.
             </p>
           </>
         ),
@@ -249,39 +254,40 @@ export const servicePages: Record<string, ServicePageData> = {
         content: (
           <>
             <p>
-              <strong>Step 1 — Diagnose.</strong> We assess the drain type, check the
-              p-trap and trap arm for accessibility, and confirm the blockage is in
-              the drain line — not the main stack.
+              <strong>Step 1 — Free Inspection &amp; Estimate.</strong> We
+              inspect the full roof and deck, document all damage, and provide a
+              detailed written estimate. We explain your material options and
+              help you choose what makes the most sense for your home.
             </p>
             <p>
-              <strong>Step 2 — Quote Upfront.</strong> Price confirmed before we
-              touch anything. You approve — then we work.
+              <strong>Step 2 — Tear-Off.</strong> We strip the old roofing
+              system completely, inspect the decking, and replace any damaged
+              sections before anything new goes on. No covering over problems.
             </p>
             <p>
-              <strong>Step 3 — Clear It.</strong> We use the right cable gauge for
-              the pipe size — no forcing, no guessing. The blockage comes out cleanly
-              without damaging the drain body or tile surround.
+              <strong>Step 3 — Install.</strong> New underlayment, flashing, and
+              roofing material installed to manufacturer spec. We work clean and
+              protect your property throughout the job.
             </p>
             <p>
-              <strong>Step 4 — Test and Clean Up.</strong> We run the shower and
-              confirm full drainage before leaving. Shoe covers and drop cloths mean
-              your bathroom floor stays clean throughout.
+              <strong>Step 4 — Final Walkthrough &amp; Cleanup.</strong> We haul
+              away all tear-off debris, do a final inspection, and walk the
+              project with you. Free anti-mold and anti-moss strips included.
             </p>
           </>
         ),
       },
     ],
     relatedServices: [
-      { label: "Drain Snaking & Augering", href: "/craft-catalog/drain-snaking"    },
-      { label: "Toilets",                  href: "/craft-catalog/toilets"           },
-      { label: "Hydro Jetting",            href: "/craft-catalog/hydro-jetting"     },
-      { label: "Kitchen Sinks",            href: "/craft-catalog/kitchen-sinks"     },
+      { label: "Roofing Repairs",   href: "/craft-catalog/roofing-repairs"       },
+      { label: "Siding Repairs",    href: "/craft-catalog/siding-repairs"        },
+      { label: "Windows & Skylights", href: "/craft-catalog/windows-and-skylights" },
     ],
   },
 
-  /* ─── TOILETS ──────────────────────────────────────────────────────────── */
-  "toilets": {
-    title: "Toilets",
+  /* ─── WINDOWS & SKYLIGHTS ───────────────────────────────────────────────── */
+  "windows-and-skylights": {
+    title: "Windows & Skylights",
     bgColor: "#101d2b",
     navItems: [
       { href: "#overview",          label: "Overview"         },
@@ -292,37 +298,42 @@ export const servicePages: Record<string, ServicePageData> = {
     overviewContent: (
       <>
         <p>
-          Stubborn toilet clogs — including foreign objects, excessive paper, and
-          blockages too deep for a plunger to reach — require the right auger and
-          the right technique. Forcing the wrong tool causes damage; calling too
-          late turns a simple clog into a sewage backup.
+          Want more natural light in your home? Looking to replace drafty,
+          single-pane windows that spike your energy bill every winter?
+          Bellerose Roofing &amp; Siding installs windows and skylights across
+          the 5 boroughs, Nassau, and Suffolk County — with the same attention
+          to detail we bring to every roofing and siding project.
         </p>
         <p>
-          Pipe Monkeys handles toilet clogs fast, without splash, and without damage
-          to the toilet body or floor. We test the flush before leaving.
+          New windows and skylights improve energy efficiency, increase home
+          value, and transform the feel of a room. We help you choose the right
+          product and handle the full installation properly.
         </p>
       </>
     ),
     overviewQuickLinks: [
-      { label: "Call (718) 749-1830", href: "tel:7187491830" },
+      { label: "Call (516) 355-0977", href: "tel:5163550977" },
       { label: "Contact Us Online",   href: "/contact-us"    },
     ],
     sections: [
       {
         id: "when_you_need_it",
-        heading: "When Do You Need Toilet Clog Service?",
+        heading: "When Should You Replace Windows or Add a Skylight?",
         content: (
           <>
             <p>
-              If a plunger hasn&rsquo;t resolved the clog after a few attempts, the
-              blockage is past the trap — deeper in the drain line or in an object
-              that can&rsquo;t be pushed through. Common culprits include: children&rsquo;s
-              toys, hygiene products, excessive wipes (even &ldquo;flushable&rdquo; ones),
-              and buildup at the horn of older toilets.
+              Drafts around window frames, condensation between the panes,
+              windows that are difficult to open or close, and rising energy
+              bills are the most common signs that your windows need to be
+              replaced. Older single-pane windows are a significant source of
+              heat loss in New York winters.
             </p>
             <p>
-              A partial clog that flushes slowly is also worth addressing before it
-              becomes a full backup. Call us before the situation escalates.
+              Skylights are worth adding when you have a room that feels dark or
+              closed off, or when you want to bring natural light into a space
+              where adding a traditional window isn&rsquo;t practical. We
+              install skylights with proper flashing and weatherproofing so they
+              never become a source of leaks.
             </p>
           </>
         ),
@@ -333,380 +344,33 @@ export const servicePages: Record<string, ServicePageData> = {
         content: (
           <>
             <p>
-              <strong>Step 1 — Diagnose.</strong> We determine whether the clog is
-              in the toilet trap, the flange connection, or deeper in the drain line.
-              That determines the right tool.
+              <strong>Step 1 — Consultation &amp; Estimate.</strong> We assess
+              your existing windows or skylight location, discuss your goals and
+              budget, and provide a written estimate before anything is ordered.
             </p>
             <p>
-              <strong>Step 2 — Quote Upfront.</strong> You get a clear price before
-              any work begins.
+              <strong>Step 2 — Product Selection.</strong> We help you choose
+              the right window style, glass type, and frame material for your
+              home&rsquo;s architecture and your energy efficiency goals.
             </p>
             <p>
-              <strong>Step 3 — Clear It.</strong> We use a professional closet auger
-              to retrieve the object or break up the blockage without scratching the
-              bowl or damaging the internal glaze. We&rsquo;ve cleared everything from
-              toys to full pipe obstructions.
+              <strong>Step 3 — Installation.</strong> Proper installation is
+              everything with windows and skylights. We flash, seal, and insulate
+              around every opening to prevent drafts and water infiltration.
             </p>
             <p>
-              <strong>Step 4 — Test and Clean Up.</strong> Multiple test flushes
-              confirm the line is clear. We wipe down and leave the bathroom exactly
-              as we found it.
+              <strong>Step 4 — Cleanup &amp; Walkthrough.</strong> We haul away
+              old windows and all debris, and do a final walkthrough with you
+              before we leave.
             </p>
           </>
         ),
       },
     ],
     relatedServices: [
-      { label: "Tubs & Showers",           href: "/craft-catalog/tubs-and-showers" },
-      { label: "Drain Snaking & Augering", href: "/craft-catalog/drain-snaking"    },
-      { label: "Main Sewer Lines",         href: "/craft-catalog/main-sewer-lines" },
-      { label: "Camera Inspection",        href: "/craft-catalog/camera-inspection"},
-    ],
-  },
-
-  /* ─── HYDRO JETTING ────────────────────────────────────────────────────── */
-  "hydro-jetting": {
-    title: "Hydro Jetting",
-    bgColor: "#101d2b",
-    navItems: [
-      { href: "#overview",          label: "Overview"         },
-      { href: "#when_you_need_it",  label: "When You Need It" },
-      { href: "#our_process",       label: "Our Process"      },
-      { href: "#related_services",  label: "Related Services" },
-    ],
-    overviewContent: (
-      <>
-        <p>
-          A snake clears a path through a clog. Hydro jetting actually scrubs the
-          interior pipe walls — using high-pressure water to blast away grease, scale,
-          mineral deposits, and root fragments from the inside out.
-        </p>
-        <p>
-          If the same drain has backed up multiple times in the past year, jetting is
-          the long-term fix. Pipe Monkeys offers hydro jetting for kitchen lines, main
-          sewer lines, and commercial buildings throughout Brooklyn, Queens, and Nassau
-          County.
-        </p>
-      </>
-    ),
-    overviewQuickLinks: [
-      { label: "Call (718) 749-1830", href: "tel:7187491830" },
-      { label: "Contact Us Online",   href: "/contact-us"    },
-    ],
-    sections: [
-      {
-        id: "when_you_need_it",
-        heading: "When Is Hydro Jetting the Right Call?",
-        content: (
-          <>
-            <p>
-              Hydro jetting is the right call when: a drain has recurring clogs despite
-              regular snaking; there is confirmed grease buildup in a restaurant or
-              commercial kitchen line; a camera inspection reveals significant scale or
-              root intrusion that a cutter alone won&rsquo;t fully resolve; or a
-              landlord wants a clean baseline before a new tenant moves in.
-            </p>
-            <p>
-              Jetting is not the right first tool for every job — we&rsquo;ll always
-              recommend it when it&rsquo;s warranted, and only when it&rsquo;s warranted.
-            </p>
-          </>
-        ),
-      },
-      {
-        id: "our_process",
-        heading: "How We Handle It",
-        content: (
-          <>
-            <p>
-              <strong>Step 1 — Camera First (Recommended).</strong> For main line
-              jetting, we run a camera to confirm the pipe is structurally sound before
-              introducing high pressure. Jetting a cracked or collapsed pipe makes the
-              problem worse.
-            </p>
-            <p>
-              <strong>Step 2 — Quote Upfront.</strong> Price confirmed before we start.
-            </p>
-            <p>
-              <strong>Step 3 — Jet It.</strong> We feed the jetting hose into the
-              clean-out or access point and work the nozzle through the line at up to
-              4,000 PSI — forward and backward — until the walls are clean and flow
-              is fully restored.
-            </p>
-            <p>
-              <strong>Step 4 — Confirm.</strong> We run water to verify full flow
-              and, on main line jobs, can run a post-jet camera to show you the results.
-            </p>
-          </>
-        ),
-      },
-    ],
-    relatedServices: [
-      { label: "Camera Inspection",        href: "/craft-catalog/camera-inspection"   },
-      { label: "Main Sewer Lines",         href: "/craft-catalog/main-sewer-lines"    },
-      { label: "Kitchen Sinks",            href: "/craft-catalog/kitchen-sinks"       },
-      { label: "Multi-Unit Buildings",     href: "/craft-catalog/multi-unit-buildings"},
-    ],
-  },
-
-  /* ─── DRAIN SNAKING & AUGERING ─────────────────────────────────────────── */
-  "drain-snaking": {
-    title: "Drain Snaking & Augering",
-    bgColor: "#101d2b",
-    navItems: [
-      { href: "#overview",          label: "Overview"         },
-      { href: "#when_you_need_it",  label: "When You Need It" },
-      { href: "#our_process",       label: "Our Process"      },
-      { href: "#related_services",  label: "Related Services" },
-    ],
-    overviewContent: (
-      <>
-        <p>
-          Drain snaking is the first-line tool for most residential clogs. Our
-          professional-grade electric snakes reach further, spin harder, and break
-          through blockages that hand snakes and drugstore augers can&rsquo;t touch.
-        </p>
-        <p>
-          Pipe Monkeys carries multiple cable sizes — from small bathroom drain cables
-          to full main-line cables — so the right tool is always on the truck when we
-          arrive.
-        </p>
-      </>
-    ),
-    overviewQuickLinks: [
-      { label: "Call (718) 749-1830", href: "tel:7187491830" },
-      { label: "Contact Us Online",   href: "/contact-us"    },
-    ],
-    sections: [
-      {
-        id: "when_you_need_it",
-        heading: "When Do You Need Drain Snaking?",
-        content: (
-          <>
-            <p>
-              Snaking is the right call for most single-drain clogs — kitchen sinks,
-              bathroom sinks, tubs, showers, and toilets where the blockage is localized.
-              It&rsquo;s also the first step for main line jobs before deciding whether
-              hydro jetting is needed.
-            </p>
-            <p>
-              If you&rsquo;ve tried a plunger or a hand snake without results, the
-              clog is past what consumer tools can reach. A professional cable gets
-              into the line, breaks up or retrieves the obstruction, and leaves the
-              drain fully open.
-            </p>
-          </>
-        ),
-      },
-      {
-        id: "our_process",
-        heading: "How We Handle It",
-        content: (
-          <>
-            <p>
-              <strong>Step 1 — Select the Right Tool.</strong> Cable diameter matters.
-              We match the cable to the pipe size — forcing an oversized cable causes
-              damage; undersizing leaves the clog intact.
-            </p>
-            <p>
-              <strong>Step 2 — Quote Upfront.</strong> You know the price before work
-              begins.
-            </p>
-            <p>
-              <strong>Step 3 — Snake It.</strong> We feed the cable through the access
-              point (drain opening, clean-out, or trap access) and work through the
-              blockage until the line clears. If the cable hits something it can&rsquo;t
-              resolve, we&rsquo;ll tell you immediately — no pushing blind.
-            </p>
-            <p>
-              <strong>Step 4 — Test and Clean Up.</strong> Water runs to confirm full
-              drainage. Cable, debris, and equipment cleaned up before we leave.
-            </p>
-          </>
-        ),
-      },
-    ],
-    relatedServices: [
-      { label: "Hydro Jetting",        href: "/craft-catalog/hydro-jetting"     },
-      { label: "Main Sewer Lines",     href: "/craft-catalog/main-sewer-lines"  },
-      { label: "Kitchen Sinks",        href: "/craft-catalog/kitchen-sinks"     },
-      { label: "Tubs & Showers",       href: "/craft-catalog/tubs-and-showers"  },
-    ],
-  },
-
-  /* ─── CAMERA INSPECTION ────────────────────────────────────────────────── */
-  "camera-inspection": {
-    title: "Camera Inspection",
-    bgColor: "#101d2b",
-    navItems: [
-      { href: "#overview",          label: "Overview"         },
-      { href: "#when_you_need_it",  label: "When You Need It" },
-      { href: "#our_process",       label: "Our Process"      },
-      { href: "#related_services",  label: "Related Services" },
-    ],
-    overviewContent: (
-      <>
-        <p>
-          Before recommending a major repair, jetting service, or repeated snaking,
-          Pipe Monkeys can run a camera through your main line and show you exactly
-          what&rsquo;s in there — in real time. You see what we see: root intrusion,
-          grease buildup, pipe damage, or collapsed sections.
-        </p>
-        <p>
-          No guesswork. No upsells on work you don&rsquo;t need.
-        </p>
-      </>
-    ),
-    overviewQuickLinks: [
-      { label: "Call (718) 749-1830", href: "tel:7187491830" },
-      { label: "Contact Us Online",   href: "/contact-us"    },
-    ],
-    sections: [
-      {
-        id: "when_you_need_it",
-        heading: "When Do You Need a Camera Inspection?",
-        content: (
-          <>
-            <p>
-              Camera inspection is the right call when: a main line blockage keeps
-              coming back after repeated snaking; you&rsquo;re buying or selling a
-              home and want to know the condition of the sewer line; a plumber or
-              contractor recommends an expensive repair and you want independent
-              verification; or we recommend hydro jetting and want to confirm the
-              pipe is structurally sound first.
-            </p>
-            <p>
-              It&rsquo;s also useful after a major clearing job — we can show you the
-              before-and-after results so you know the line is actually clean, not
-              just partially cleared.
-            </p>
-          </>
-        ),
-      },
-      {
-        id: "our_process",
-        heading: "How We Handle It",
-        content: (
-          <>
-            <p>
-              <strong>Step 1 — Access the Line.</strong> We locate the clean-out or
-              access point nearest to the problem area. In buildings without a clean-out,
-              we&rsquo;ll advise on the best access option.
-            </p>
-            <p>
-              <strong>Step 2 — Quote Upfront.</strong> Price confirmed before the
-              camera goes in.
-            </p>
-            <p>
-              <strong>Step 3 — Run the Camera.</strong> We feed a high-resolution
-              camera through the line and walk you through what we see — root masses,
-              grease, cracks, offsets, or clear pipe. You&rsquo;re watching the screen
-              in real time.
-            </p>
-            <p>
-              <strong>Step 4 — Report and Recommend.</strong> We tell you what we found
-              and what, if anything, needs to be done — with the footage to back it up.
-              You decide how to proceed. No pressure.
-            </p>
-          </>
-        ),
-      },
-    ],
-    relatedServices: [
-      { label: "Hydro Jetting",            href: "/craft-catalog/hydro-jetting"       },
-      { label: "Main Sewer Lines",         href: "/craft-catalog/main-sewer-lines"    },
-      { label: "Drain Snaking & Augering", href: "/craft-catalog/drain-snaking"       },
-      { label: "Multi-Unit Buildings",     href: "/craft-catalog/multi-unit-buildings"},
-    ],
-  },
-
-  /* ─── MULTI-UNIT & COMMERCIAL BUILDINGS ────────────────────────────────── */
-  "multi-unit-buildings": {
-    title: "Multi-Unit & Commercial Buildings",
-    bgColor: "#101d2b",
-    navItems: [
-      { href: "#overview",          label: "Overview"         },
-      { href: "#when_you_need_it",  label: "When You Need It" },
-      { href: "#our_process",       label: "Our Process"      },
-      { href: "#related_services",  label: "Related Services" },
-    ],
-    overviewContent: (
-      <>
-        <p>
-          Pipe Monkeys works with brownstones, pre-war walk-ups, condos, co-ops,
-          and multi-family buildings across Brooklyn and Queens every day. Stack
-          drain issues, shared main lines, and building-wide backups are all in
-          our wheelhouse — and we know how to coordinate the job without creating
-          chaos for tenants.
-        </p>
-        <p>
-          Building managers and landlords: we show up on time, work efficiently,
-          and document the work. Call us directly at{" "}
-          <a href="tel:7187491830">(718) 749-1830</a>.
-        </p>
-      </>
-    ),
-    overviewQuickLinks: [
-      { label: "Call (718) 749-1830", href: "tel:7187491830" },
-      { label: "Contact Us Online",   href: "/contact-us"    },
-    ],
-    sections: [
-      {
-        id: "when_you_need_it",
-        heading: "When Do You Need Multi-Unit Drain Service?",
-        content: (
-          <>
-            <p>
-              A building-wide backup — multiple units complaining of slow drains or
-              sewage odors simultaneously — almost always points to the main building
-              drain or the stack serving multiple floors. Individual unit clogs are
-              more straightforward; building-wide problems require more diagnostic
-              work to pinpoint whether the issue is in a branch line, the main stack,
-              or the building sewer itself.
-            </p>
-            <p>
-              We handle both. Whether it&rsquo;s a single-apartment drain or a main
-              line serving a six-unit brownstone, we bring the right equipment and
-              take the time to find the actual source of the problem.
-            </p>
-          </>
-        ),
-      },
-      {
-        id: "our_process",
-        heading: "How We Handle It",
-        content: (
-          <>
-            <p>
-              <strong>Step 1 — Coordinate with Management.</strong> We work directly
-              with the building manager or owner to understand which units are affected
-              and minimize disruption. If access to multiple units is needed, we schedule
-              efficiently.
-            </p>
-            <p>
-              <strong>Step 2 — Diagnose the Root Cause.</strong> Building-wide symptoms
-              need root-cause diagnosis — we don&rsquo;t just snake the nearest drain.
-              Camera inspection is often recommended to locate the exact blockage in
-              the stack or main building drain.
-            </p>
-            <p>
-              <strong>Step 3 — Quote Upfront.</strong> Clear price before we start.
-              For complex jobs, we scope the work and confirm before proceeding.
-            </p>
-            <p>
-              <strong>Step 4 — Clear and Confirm.</strong> We use the right tool for
-              the blockage type — snake, industrial cutter, or hydro jet — confirm full
-              flow on all affected units, and document the work completed.
-            </p>
-          </>
-        ),
-      },
-    ],
-    relatedServices: [
-      { label: "Camera Inspection",        href: "/craft-catalog/camera-inspection" },
-      { label: "Hydro Jetting",            href: "/craft-catalog/hydro-jetting"     },
-      { label: "Main Sewer Lines",         href: "/craft-catalog/main-sewer-lines"  },
-      { label: "Drain Snaking & Augering", href: "/craft-catalog/drain-snaking"     },
+      { label: "Roofing Repairs",              href: "/craft-catalog/roofing-repairs"             },
+      { label: "Siding Repairs",               href: "/craft-catalog/siding-repairs"              },
+      { label: "Roofing Tear-Offs & Installs", href: "/craft-catalog/roofing-tearoffs-and-installs" },
     ],
   },
 };

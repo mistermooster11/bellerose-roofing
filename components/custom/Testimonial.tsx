@@ -3,33 +3,34 @@
 import { useRef, useState, useEffect, useCallback } from "react";
 import { useInView } from "framer-motion";
 
-// TODO: Replace placeholder reviews with real Google reviews from Pipe Monkeys.
-// Daniel Pipitone is confirmed real. The others are placeholders — request from client.
+// TODO: Replace all placeholder reviews with real Google/Yelp reviews from Bellerose Roofing & Siding.
+// Request at least 3 verified reviews from client before launch.
 const testimonials = [
   {
-    id: "daniel-pipitone",
+    id: "review-1",
+    // TODO: Replace with a real review from client
     quote:
-      "Professional service with a very fair price. They send you info about the assigned technician in advance and showed up exactly on time. They cleaned up nicely after snaking a drain line on the 2nd floor of a 3 story building. Forget Roto Rooter — Pipe Monkeys will be my new go-to for plumbing needs.",
-    name: "Daniel Pipitone",
-    position: "Brooklyn Homeowner",
+      "Bellerose replaced our roof after a major storm and the whole experience was seamless. They came out the next day to inspect, gave us a written estimate the same week, and the crew finished the job ahead of schedule. Fair price, zero mess left behind, and they kept us in the loop the whole time.",
+    name: "Queens Homeowner",
+    position: "Floral Park, NY",
     platform: "Google Review ★★★★★",
   },
   {
-    id: "maria-santos",
-    // TODO: Replace with a real Google review from client
+    id: "review-2",
+    // TODO: Replace with a real review from client
     quote:
-      "Called at 9am with a completely backed up kitchen drain. Tech was here by 11, cleared it in under an hour. He explained exactly what caused the clog and how to prevent it. Pricing was upfront and fair — no pushing extras I didn't need. Will absolutely use them again.",
-    name: "Maria Santos",
-    position: "Queens Homeowner",
+      "We needed new siding and windows on our house in Nassau County. Bellerose gave us the best estimate out of three contractors we called and the work came out great. Family-owned business that actually cares about the job — you can tell the difference.",
+    name: "Nassau County Homeowner",
+    position: "Nassau County, NY",
     platform: "Google Review ★★★★★",
   },
   {
-    id: "james-oconnor",
-    // TODO: Replace with a real Google review from client
+    id: "review-3",
+    // TODO: Replace with a real review from client
     quote:
-      "Had a main line backup that two other companies couldn't fully clear. Pipe Monkeys came the same afternoon, ran a camera first so we could see exactly what was in there, then jetted it clean. You could see the difference on the camera footage after. Highly recommend for any serious sewer issue.",
-    name: "James O'Connor",
-    position: "Nassau County Homeowner",
+      "I've used Bellerose twice — once for a roof repair and once for a full tear-off. Both times they were honest, on time, and the price matched the estimate exactly. The crew cleaned up so well you wouldn't know they had been there. Will always call them first.",
+    name: "Long-Time Customer",
+    position: "Queens, NY",
     platform: "Google Review ★★★★★",
   },
 ];
@@ -179,7 +180,7 @@ export default function Testimonial() {
           className={`h3 ia-white fadeInUpS wow${vis}`}
           style={{ animationDelay: "0.1s" }}
         >
-          Real Reviews From Real Neighbors
+          35 Years of Happy Homeowners
         </h2>
       </div>
 

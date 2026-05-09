@@ -1,127 +1,102 @@
-# Pipe Monkeys — Content Brief
+# Bellerose Roofing & Siding — Content Brief
 **QuickFlip Sites | Build Log**
-Date: April 2026
-Prospect: pipemonkeys.com (Brooklyn, Queens & Nassau County drain/sewer)
-Template: NCCER clone (Next.js 14 App Router)
-Reference site: apexroofingpro.com
+Date: May 2026
+Prospect: https://belleroseroofingsiding.com/
+Template: PipeMonkey-Redesign (Next.js App Router)
+Reference site: https://ae-nyc-plumbing.vercel.app/contact-us (contact page layout only)
 
 ---
 
 ## Source Material Summary
 
-Pipe Monkeys' existing site is a **single-page WordPress build** — no subpages, no blog, no gallery. All content was pulled from that one page and distributed across the template's 7-page structure. Key details extracted:
+- **Business name:** Bellerose Roofing & Siding
+- **Primary phone:** (516) 355-0977
+- **Secondary phone:** (718) 343-0620
+- **Address:** 92 Chestnut Ave, Floral Park, NY 11001
+- **Hours:** Mon–Fri: 8am–6pm | Sat & Sun: By appointment
+- **Years in business:** 35+ (About page states 35; homepage stated 25 — 35 used as more credible/detailed source)
+- **Business type:** Family-owned and operated
+- **Service area:** NYC 5 boroughs, Nassau County, Suffolk County
+- **Licensing:** NYC Lic# 1259922 | Nassau Lic# H18B8620000 | Floral Park Lic# 119
+- **Key differentiators extracted from site:**
+  - Family-owned, passionate about quality
+  - Fair and honest pricing
+  - Expert estimates, no surprises at billing
+  - Client kept involved every step of the way
+  - Free anti-mold and anti-moss strips on every roofing job
+  - Free estimates
+- **Testimonials:** None found on prospect site — all testimonials are generated placeholders and must be replaced with real reviews before launch
+- **Social media:** None found on prospect site
 
-- **Phone:** (718) 749-1830
-- **Service area:** Brooklyn, Queens, Nassau County
-- **Services:** Main sewer line, kitchen sink, tub/shower, toilet, hydro jetting, drain snaking, camera inspection, multi-unit/commercial
-- **Differentiators from site copy:** Upfront pricing, local NYC techs, cleanup guarantee, same-day scheduling
-- **Key testimonial:** Daniel Pipitone, Brooklyn homeowner — Google review
+---
+
+## Service Inventory
+
+1. Roofing Repairs (asphalt, ceramic tile, synthetic slate, rubber)
+2. Siding Repairs (rotten wood siding, vinyl panels)
+3. Roofing Tear-Offs & New Installs
+4. Windows & Skylights
+
+All 4 services appear in `crafts.ts` and `service-pages.tsx`.
+
+---
+
+## Services Consolidated
+
+None. All 4 services are distinct and kept separate.
 
 ---
 
 ## Pages Built & Content Decisions
 
-### 1. Homepage (`app/page.tsx`)
-**Structure:** Hero → How It Works → Why Pipe Monkeys (stats) → Testimonial
+### Homepage Components
+- **Hero.tsx** — H1 rewritten: "Queens & Long Island Roofing, Siding & Windows". Subhead uses extracted copy (family-owned, 35 years, licensed & insured, free estimates). CTA updated to `(516) 355-0977`.
+- **Topnav.tsx** — Phone updated to `(516) 355-0977 — Free Estimates Available`.
+- **Footer.tsx** — Contact info, address, hours, service areas all updated. Social links removed (none found — TODO added). Copyright updated.
+- **Announcements.tsx** — "How It Works" rewritten for roofing process (Inspect → Estimate → Install → Cleanup). Extracted copy used for all 3 steps.
+- **Difference.tsx** — Stats updated: 35+ Years | Free Estimates | 100% Licensed & Insured NYC/Nassau/Suffolk. Headline: "Family-Owned. Fair Pricing. Done Right."
+- **AccordionItems.tsx** — All 4 accordion entries rewritten for the 4 roofing/siding/window services.
+- **Insights.tsx** — Sub-heading updated: "Our Roofing & Exterior Services".
+- **HomeCTA.tsx** — CTA rewritten for free estimates, roofing trade. Phone updated.
+- **Testimonial.tsx** — 3 placeholder reviews written (all flagged with TODO — must be replaced with real reviews).
 
-**Kept from source:** Business headline concept, service area list, tech credentials, upfront pricing promise, cleanup guarantee, testimonial
+### Data Files
+- **belle-rose-roofing.tsx** — Full channel data written from extracted copy. All fields populated.
+- **crafts.ts** — Replaced with 4 roofing/siding/window services.
+- **service-pages.tsx** — 4 full service detail pages written with extracted/trade-library copy.
+- **programs.tsx** — 4 service cards written. `partners: []` (no partners for trade client).
 
-**Cut from template:** Insights tabbed section (NCCER org-specific), Donation widget, Research section, News section — all irrelevant to a trade service business
+### Inline Pages
+- **contact-us/page.tsx** — Redesigned to match A&E NYC Plumbing reference layout (form + map side-by-side). Key difference from reference: form column uses `align-items: stretch` + flex-grow on form and textarea so form fills same height as map on desktop. Address: 92 Chestnut Ave, Floral Park, NY 11001. Both phone numbers listed below map. Service dropdown updated to 6 roofing/siding options.
+- **general-faqs/page.tsx** — 8 roofing-specific FAQs written. Topics: free estimates, years in business, roof types, repair vs. replace, licensing, service area, mid-project communication, commercial work.
+- **gallery/page.tsx** — 4 placeholder gallery items: Roof Replacement (Queens), Siding (Nassau), Storm Repair (Floral Park), Windows (Suffolk). All flagged TODO for real job photos.
+- **service-areas/page.tsx** — 4 area sections: Queens (home base), NYC 5 Boroughs, Nassau County, Suffolk County. All phone references updated.
+- **blog/page.tsx** — 6 roofing-relevant placeholder posts. All flagged TODO.
+- **privacy-policy/page.tsx** — Company name, phone, address updated.
 
-**Generated:** "How It Works" 3-step process (Diagnose → Approve & Clear → Confirm & Clean Up) — written to match PM's stated process; short and concrete, no fluff
-
-**Stats block:** "Same-Day", "4.9★", "100%" — drawn from real review signals. Note: Verify exact review count and rating with client before launch.
-
----
-
-### 2. About Us (`app/explore/[slug]/page.tsx` → `/explore/pipemonkeys`)
-**Data file:** `data/channel/pipemonkeys.tsx`
-
-**Kept:** All copy about the business ethos, local knowledge angle, upfront pricing, cleanup guarantee, Daniel Pipitone testimonial
-
-**Restructured:** Split into 4 headed subsections (Upfront Pricing, Local NYC Technicians, Clean Every Time, Real Results Guaranteed) — matches how Apex Roofing Pro handled their About section: scannable, value-point driven
-
-**Generated:** Intro paragraph ("When drains back up, homeowners need someone fast, honest, and effective…") — 1 tight paragraph, no fluff
-
----
-
-### 3. Services Catalog (`app/craft-catalog/page.tsx`)
-**Data file:** `data/craft-catalog/crafts.ts`
-
-**Replaced:** 67 NCCER craft items → 8 PM services
-- Main Sewer Lines | Kitchen Sinks | Tubs & Showers | Toilets | Hydro Jetting | Drain Snaking & Augering | Camera Inspection | Multi-Unit & Commercial Buildings
-
-**Category taxonomy:** Drain Cleaning / Advanced Services / Commercial — mirrors the filterable nav pattern from the template
-
----
-
-### 4. Service Detail Pages (`app/programs-crafts/programs/page.tsx`)
-**Data file:** `data/programs.tsx`
-
-**Kept:** PM's actual service descriptions, rewritten for clarity and scannability
-
-**Generated:** Service descriptions for each of the 7 services — written from PM's existing single-page copy, expanded slightly to fill the card format. Each is 1 focused paragraph, no padding.
-
-**Cut:** Partner logos section (no external partners applicable)
-
----
-
-### 5. FAQs (`app/general-faqs/page.tsx`)
-
-**Kept:** All 7 FAQs are grounded in PM's real positioning and services — pulled directly from what the site communicated
-
-**Generated:** Q&A format copy — none of it contradicts PM's actual service model. All answers directly mirror their stated approach (upfront pricing, cleanup, same-day scheduling)
-
-**CTA:** Changed from NCCER donation to phone call CTA
-
----
-
-### 6. Contact Us (`app/contact-us/page.tsx`)
-
-**Kept:** Phone number, service area info, form embed (HubSpot iframe — left in place)
-
-**Replaced:** NCCER staff directory → 3 service area cards (Brooklyn, Queens, Nassau) with full neighborhood lists
-
-**TODO flagged:** Contact form iframe — client needs to verify the HubSpot form ID or replace with their preferred form tool
-
----
-
-### 7. Gallery (`app/gallery/page.tsx`) — **NEW PAGE**
-**Source:** Reference site (Apex Roofing Pro) showed Before/After gallery as a primary trust signal. PM has no existing gallery.
-
-**Decision:** Built full gallery page with 6 placeholder before/after cards across all service categories. Layout uses 2-column before/after image pairs per job card.
-
-**All images flagged:** `[TODO: swap image]` throughout — client needs to provide real job photos
-
----
-
-### 8. Service Areas (`app/service-areas/page.tsx`) — **NEW PAGE**
-**Source:** Reference site had a dedicated service area section. PM serves 3 distinct regions with very different housing stock.
-
-**Decision:** Built one page with 3 anchor-linked sections (Brooklyn, Queens, Nassau County). Each section has: a localized description, 3 specific callouts, full neighborhood list.
-
-**Generated:** All copy — written to be locally specific (brownstones in Brooklyn, long sewer runs in Nassau, mixed housing types in Queens). All factual details are consistent with PM's actual service area.
-
----
-
-### 9. Blog (`app/blog/page.tsx`) — **NEW PAGE**
-**Source:** Reference site had a blog. PM has none.
-
-**Decision:** Built a placeholder blog index with 6 sample posts. Post titles and excerpts are real content angles Pipe Monkeys could use — all relevant to their actual services and customer pain points.
-
-**TODO flagged:** All posts are placeholders. Client needs to: (a) decide if they want a blog, (b) wire up CMS or create individual post pages if yes.
+### Dynamic Pages
+- **craft-catalog/page.tsx** — Metadata updated.
+- **craft-catalog/[slug]/page.tsx** — Metadata + CTA banner + Related Services description all updated.
+- **CraftCatalogHero.tsx** — Intro copy rewritten for roofing trade.
 
 ---
 
 ## Navigation Changes
 
-**Template had:** 7-item mega-dropdown NCCER nav (CraftPro, Explore, Crafts, Credentials, Career Pathways, Research, Our Impact, About Us)
+Template default (Home | Services | FAQs | Contact) kept unchanged. No Service Areas item added to nav — service areas are accessible from footer and internal links. Can add if client requests.
 
-**PM nav:** Home | Services | FAQs | Contact — 4 flat items, no dropdowns. Matches Apex Roofing Pro's lean 4-item pattern.
+---
 
-**Topnav:** Replaced NCCER utility links (Find My NCCER Number, Take Module Test) with PM phone number bar: "(718) 749-1830 — Same-Day Service Available"
+## Copy Generation Log
 
-**Footer:** Replaced NCCER widgets (Donation, Mailing List) with PM Contact Info + Service Areas summary
+The following copy was generated (not extracted from prospect site) due to content gaps:
+
+1. **All testimonials** — Prospect site has no testimonials. 3 placeholder reviews written to match the roofing trade and service area. Must be replaced with real Google/Yelp reviews before launch.
+2. **FAQ answers** — Prospect site has no FAQ page. 8 FAQs written using extracted differentiators and trade content library patterns.
+3. **Blog posts** — 6 placeholder article titles and excerpts written. All flagged TODO.
+4. **Gallery captions** — 4 placeholder before/after job descriptions written. All flagged TODO.
+5. **Service detail page body copy** — The prospect site has very thin service descriptions (1-3 bullets each). Full "When You Need It" and "Our Process" sections written using Trade Content Library roofing patterns + extracted differentiators.
+6. **About Us learnMore sections** — Expanded from thin extracted copy using prospect's own stated differentiators (fair pricing, involvement, licensing).
 
 ---
 
@@ -129,39 +104,21 @@ Pipe Monkeys' existing site is a **single-page WordPress build** — no subpages
 
 | Item | File | Notes |
 |------|------|-------|
-| Hero image/video | `components/custom/Hero.tsx` | Replace placeholder with PM photo |
-| Logo files | `Topnav.tsx`, `Footer.tsx` | Replace `/logos/logo-94.svg` and `/logos/logo-long.svg` |
-| Gallery photos | `app/gallery/page.tsx` | All 6 before/after pairs need real job photos |
-| Difference section photo | `components/custom/Difference.tsx` | Job site or team photo needed |
-| Announcements photo | `components/custom/Announcements.tsx` | One team/job site photo |
-| Contact form | `app/contact-us/page.tsx` | Verify HubSpot form ID or replace with preferred form |
-| Social media links | `components/custom/Footer.tsx` | Verify actual Facebook/Instagram URLs |
-| Business hours | `components/custom/Footer.tsx` | Mon–Sat 7am–8pm is a placeholder — confirm with client |
-| Review count/rating | `components/custom/Difference.tsx` | "4.9★" — verify current rating |
-| Blog decision | `app/blog/page.tsx` | Client to decide: live blog or remove page |
-| Additional testimonials | `components/custom/Testimonial.tsx` | Currently 1 quote — request more from client |
-
----
-
-## Copy Generation Log
-
-All generated copy is marked below. Everything else is derived directly from pipemonkeys.com or is structural/navigational.
-
-**Generated (short):**
-- Homepage intro headline refinement
-- "How It Works" 3-step process in `Announcements.tsx`
-- Stats block labels in `Difference.tsx`
-- Blog post titles and excerpts (6 items) — placeholders only
-- Service area descriptions for Brooklyn, Queens, Nassau County in `service-areas/page.tsx`
-
-**Generated (micro-copy):**
-- CTA button labels throughout
-- Breadcrumbs
-- Sub-headings and section labels
-
-**Not generated — pulled from source:**
-- All service descriptions
-- All FAQ answers
-- Daniel Pipitone testimonial
-- Neighborhood lists
-- Phone number, pricing philosophy, cleanup guarantee language
+| Replace hero video with real roofing photo/video | `components/custom/Hero.tsx` | Remove `<video>` tag or replace src |
+| Replace feature section image | `components/custom/Announcements.tsx` | `backgroundImage` inline style |
+| Replace trust photo | `components/custom/Difference.tsx` | `<VapeImage src>` prop |
+| Replace 4 accordion images | `lib/constants/AccordionItems.tsx` | One per service |
+| Replace About Us hero background | `data/channel/belle-rose-roofing.tsx → hero.imageBg` | Full CSS background string |
+| Replace About Us flex feature photo | `data/channel/belle-rose-roofing.tsx → flexFeature.imageSrc` | Direct URL |
+| Replace all service detail hero images | `app/craft-catalog/[slug]/page.tsx → PLACEHOLDER_BG` | Shared constant — swap per slug before launch |
+| Replace 4 gallery before/after images | `app/gallery/page.tsx → galleryItems[]` | Real job photos from client |
+| Replace logo files | `/public/logos/logo-94.svg` + `/public/logos/logo-long.svg` | Client logo needed |
+| Replace all 3 testimonials | `components/custom/Testimonial.tsx` | Confirmed real Google/Yelp reviews |
+| Add social media URLs | `components/custom/Footer.tsx → socials[]` | None found on prospect site — ask client |
+| Verify/replace Google Maps embed | `app/contact-us/page.tsx` | Embed src uses placeholder coords — replace with verified embed for 92 Chestnut Ave, Floral Park |
+| Replace contact page hero image | `app/contact-us/page.tsx → CraftHero bgImage` | Roofing-appropriate photo |
+| Replace blog posts with real content | `app/blog/page.tsx` | All 6 posts are placeholders |
+| Replace gallery with real job photos | `app/gallery/page.tsx` | All 4 items are placeholders |
+| Add email address | `app/contact-us/page.tsx`, footer | None found on prospect site — ask client |
+| Connect contact form backend | `app/contact-us/page.tsx` | JotForm, HubSpot, or Gravity Forms |
+| Confirm Suffolk County coverage scope | `app/service-areas/page.tsx` | Note says "call to confirm" — update with actual towns served |

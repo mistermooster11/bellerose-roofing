@@ -5,60 +5,61 @@ import { useInView } from "framer-motion";
 
 /* ── Blog Posts (placeholder — swap with real posts or CMS data) */
 
+// [TODO: Replace all placeholder posts with real content from client or CMS before launch]
 const posts = [
   {
-    id: "why-drains-keep-clogging",
-    title: "Why Your Drain Keeps Clogging (And What Actually Fixes It)",
+    id: "repair-or-replace-roof",
+    title: "Roof Repair vs. Full Replacement: How to Make the Right Call",
     excerpt:
-      "Snaking the same drain every few months? The problem usually isn't the clog — it's grease or mineral buildup on the pipe walls. Here's when to snake and when to jet.",
-    category: "Drain Tips",
-    date: "April 2026",
-    href: "/blog/why-drains-keep-clogging",
-  },
-  {
-    id: "hydro-jetting-vs-snaking",
-    title: "Hydro Jetting vs. Drain Snaking: Which One Do You Actually Need?",
-    excerpt:
-      "Both tools clear clogs — but they work very differently. We break down the honest answer for homeowners who don't want to overpay or get upsold.",
-    category: "How It Works",
-    date: "March 2026",
-    href: "/blog/hydro-jetting-vs-snaking",
-  },
-  {
-    id: "main-line-warning-signs",
-    title: "5 Warning Signs Your Main Sewer Line Is About to Back Up",
-    excerpt:
-      "Multiple slow drains, gurgling toilets, foul smells near floor drains — these aren't random. They're your plumbing system telling you something's wrong downstream.",
+      "Not every damaged roof needs to be replaced — but some repairs are just delaying the inevitable. Here's how experienced roofers think through this decision, and what questions to ask.",
     category: "Homeowner Guide",
+    date: "April 2026",
+    href: "/blog/repair-or-replace-roof",
+  },
+  {
+    id: "storm-damage-insurance",
+    title: "Roof Storm Damage: What to Document Before You Call Insurance",
+    excerpt:
+      "A good contractor inspects and documents everything before an insurance claim is filed. Here's what to look for and how the process typically works in New York.",
+    category: "Insurance & Claims",
+    date: "March 2026",
+    href: "/blog/storm-damage-insurance",
+  },
+  {
+    id: "new-york-roof-lifespan",
+    title: "How Long Should a Roof Last in New York? The Honest Answer by Material",
+    excerpt:
+      "Asphalt shingles, rubber, tile, synthetic slate — each material has a different lifespan in NYC's climate. Here's what to expect and how to get the most out of each.",
+    category: "Roofing 101",
     date: "February 2026",
-    href: "/blog/main-line-warning-signs",
+    href: "/blog/new-york-roof-lifespan",
   },
   {
-    id: "brooklyn-old-pipes",
-    title: "Brooklyn's Old Pipes: What Every Brownstone Owner Needs to Know",
+    id: "siding-buying-guide",
+    title: "Vinyl vs. Wood vs. Fiber Cement Siding: What Makes Sense in New York?",
     excerpt:
-      "Pre-war buildings in Brooklyn often have clay, cast iron, or even Orangeburg pipe. We explain what that means for your drains and how to stay ahead of blockages.",
-    category: "Local Guide",
+      "Each siding material has tradeoffs in terms of cost, durability, and maintenance. Here's how to think through the choice for a New York home specifically.",
+    category: "Siding Guide",
     date: "January 2026",
-    href: "/blog/brooklyn-old-pipes",
+    href: "/blog/siding-buying-guide",
   },
   {
-    id: "what-not-to-flush",
-    title: "What Not to Flush or Pour Down the Drain (The Real List)",
+    id: "signs-need-new-roof",
+    title: "5 Signs Your Roof Needs to Be Replaced — Not Just Repaired",
     excerpt:
-      "Flushable wipes aren't actually flushable. Grease hardens in your pipes. Here's what Pipe Monkeys techs pull out of clogged lines every single day.",
-    category: "Drain Tips",
+      "Curling shingles, granules in the gutters, sagging sections — some damage signals that repair is no longer cost-effective. Here's how to read what your roof is telling you.",
+    category: "Homeowner Guide",
     date: "December 2025",
-    href: "/blog/what-not-to-flush",
+    href: "/blog/signs-need-new-roof",
   },
   {
-    id: "camera-inspection-worth-it",
-    title: "Is a Drain Camera Inspection Worth It? Honest Answer from a Tech",
+    id: "window-replacement-guide",
+    title: "When Should You Replace Your Windows? A New York Homeowner's Guide",
     excerpt:
-      "You don't need a camera for a simple kitchen clog. But for recurring main line issues? A camera can save you thousands. Here's when we recommend it and why.",
-    category: "How It Works",
+      "Drafts, condensation between panes, and rising energy bills are the main signals. But not every old window needs replacing. Here's how to evaluate yours honestly.",
+    category: "Windows Guide",
     date: "November 2025",
-    href: "/blog/camera-inspection-worth-it",
+    href: "/blog/window-replacement-guide",
   },
 ];
 
@@ -132,7 +133,7 @@ export default function BlogPage() {
               <span className="post post-page current-item">Blog</span>
             </div>
             <h1 className={`ia-white ia-margin-0 fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.1s" }}>
-              Drain Tips & Homeowner Guides
+              Roofing &amp; Home Exterior Guides
             </h1>
           </div>
         </div>
@@ -140,12 +141,12 @@ export default function BlogPage() {
         <div className="hero-org__bottom flex-module">
           <div className="inner inner--slim-1172 cleared">
             <div className={`hero-org__left wow${heroVis}`}>
-              <div className={`sub-heading fadeInUpS wow${heroVis}`}>From the Pipe Monkeys Team</div>
+              <div className={`sub-heading fadeInUpS wow${heroVis}`}>From the Bellerose Roofing &amp; Siding Team</div>
               <div className={`content-entry fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.1s" }}>
                 <p>
-                  Practical advice from the techs who clear drains in Brooklyn, Queens, and Nassau
-                  County every single day. No fluff — just the honest information homeowners
-                  and building managers actually need.
+                  Practical advice from the Bellerose Roofing &amp; Siding team — 35 years of experience
+                  working on roofs across Queens, the 5 boroughs, Nassau, and Suffolk. No fluff, just
+                  the honest information homeowners actually need.
                 </p>
               </div>
             </div>
@@ -168,9 +169,9 @@ export default function BlogPage() {
                   </a>
                 </li>
                 <li className={`fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.3s" }}>
-                  <a className="ia-link ia-link--arrow" href="tel:7187491830">
+                  <a className="ia-link ia-link--arrow" href="tel:5163550977">
                     <i className="icon-link" />
-                    <span>Call (718) 749-1830</span>
+                    <span>Call (516) 355-0977</span>
                   </a>
                 </li>
               </ul>
@@ -207,7 +208,7 @@ export default function BlogPage() {
       >
         <div className="inner inner--slim-1172">
           <div className={`sub-heading wow fadeInUpS${ctaInView ? " is-visible" : ""}`} style={{ animationDelay: "0.1s" }}>
-            Have a Drain Emergency?
+            Need a Free Estimate?
           </div>
           <h2 className={`h2 wow fadeInUpS${ctaInView ? " is-visible" : ""}`} style={{ animationDelay: "0.2s" }}>
             Don&apos;t Wait — We Pick Up Fast
@@ -215,14 +216,15 @@ export default function BlogPage() {
           <div className={`front-donation__in wow fadeInUpS${ctaInView ? " is-visible" : ""}`} style={{ animationDelay: "0.2s" }}>
             <div className="content-entry">
               <p>
-                Call <strong>(718) 749-1830</strong> and we&apos;ll give you an ETA on the spot.
-                Same-day service available seven days a week across Brooklyn, Queens, and Nassau County.
+                Call <strong>(516) 355-0977</strong> and we&apos;ll give you an ETA on the spot.
+                Call us to schedule a free inspection and written estimate. We serve Queens, all 5 boroughs,
+                Nassau County, and Suffolk County.
               </p>
             </div>
             <div className="front-donation__btn-wrap">
               <div className="front-donation__btn">
-                <a className="btn btn--primary" href="tel:7187491830">
-                  Call (718) 749-1830
+                <a className="btn btn--primary" href="tel:5163550977">
+                  Call (516) 355-0977
                 </a>
               </div>
             </div>

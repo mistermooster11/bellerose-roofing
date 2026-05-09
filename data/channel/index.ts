@@ -4,6 +4,7 @@ import corrections   from "./corrections";
 import highSchools   from "./high-schools";
 import postsecondary from "./postsecondary";
 import pipemonkeys   from "./pipemonkeys";
+import belleRoseRoofing from "./belle-rose-roofing";
 
 const channelDataMap: Record<string, ChannelPageData> = {
   associations,
@@ -11,6 +12,7 @@ const channelDataMap: Record<string, ChannelPageData> = {
   "high-schools": highSchools,
   postsecondary,
   pipemonkeys,
+  "belle-rose-roofing": belleRoseRoofing,
 };
 
 export function getChannelData(slug: string): ChannelPageData | null {

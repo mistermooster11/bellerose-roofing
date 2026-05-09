@@ -8,43 +8,43 @@ import { useInView } from "framer-motion";
 const galleryItems = [
   {
     id: "gallery-1",
-    label: "Main Sewer Line — Crown Heights, Brooklyn",
-    beforeAlt: "Blocked main sewer line before clearing",
-    afterAlt:  "Clear main sewer line after hydro jetting",
-    // [TODO: Replace with real before/after job photos from Pipe Monkeys]
+    label: "Full Roof Replacement — Queens, NY",
+    beforeAlt: "Damaged asphalt shingle roof before replacement",
+    afterAlt:  "New asphalt shingle roof after Bellerose installation",
+    // [TODO: Replace with real before/after job photos from Bellerose Roofing & Siding]
     before: "/images/IMG_9688-1024x682.jpg",
     after:  "/images/IMG_9750-1024x683.jpg",
-    category: "Main Sewer Line",
+    category: "Roof Replacement",
   },
   {
     id: "gallery-2",
-    label: "Kitchen Drain — Astoria, Queens",
-    beforeAlt: "Grease-clogged kitchen drain before clearing",
-    afterAlt:  "Kitchen drain fully cleared and flowing",
-    // [TODO: Replace with real before/after job photos from Pipe Monkeys]
+    label: "Vinyl Siding Replacement — Nassau County",
+    beforeAlt: "Damaged and faded vinyl siding before replacement",
+    afterAlt:  "Fresh vinyl siding installed by Bellerose",
+    // [TODO: Replace with real before/after job photos from Bellerose Roofing & Siding]
     before: "/images/iStock-530983109-1.jpg",
     after:  "/images/IMG_9688-1024x682.jpg",
-    category: "Kitchen Sink",
+    category: "Siding",
   },
   {
     id: "gallery-3",
-    label: "Hydro Jetting — Nassau County Home",
-    beforeAlt: "Pipe interior with grease buildup",
-    afterAlt:  "Clean pipe interior after hydro jetting",
-    // [TODO: Replace with real before/after job photos from Pipe Monkeys]
+    label: "Storm Damage Roof Repair — Floral Park, NY",
+    beforeAlt: "Roof with storm-damaged and missing shingles",
+    afterAlt:  "Roof fully repaired after storm damage",
+    // [TODO: Replace with real before/after job photos from Bellerose Roofing & Siding]
     before: "/images/IMG_9750-1024x683.jpg",
     after:  "/images/iStock-530983109-1.jpg",
-    category: "Hydro Jetting",
+    category: "Roof Repair",
   },
   {
     id: "gallery-4",
-    label: "Tub Drain — Bay Ridge, Brooklyn",
-    beforeAlt: "Hair-clogged tub drain before clearing",
-    afterAlt:  "Tub drain cleared with no damage to tile",
-    // [TODO: Replace with real before/after job photos from Pipe Monkeys]
+    label: "Window Replacement — Suffolk County",
+    beforeAlt: "Old single-pane windows before replacement",
+    afterAlt:  "New energy-efficient windows installed by Bellerose",
+    // [TODO: Replace with real before/after job photos from Bellerose Roofing & Siding]
     before: "/images/IMG_9688-1024x682.jpg",
     after:  "/images/IMG_9750-1024x683.jpg",
-    category: "Tub & Shower",
+    category: "Windows",
   },
 ];
 
@@ -165,8 +165,8 @@ export default function GalleryPage() {
               <div className={`sub-heading fadeInUpS wow${heroVis}`}>Real Results</div>
               <div className={`content-entry fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.1s" }}>
                 <p>
-                  Every job below was done by a Pipe Monkeys tech in Brooklyn, Queens, or Nassau
-                  County. These are real lines, real homes, and real results — no stock photos.
+                  Every job below was completed by the Bellerose Roofing &amp; Siding crew across Queens,
+                  the 5 boroughs, Nassau, and Suffolk County. Real homes, real results — no stock photos.
                   {/* [TODO: Replace placeholder images with actual job photos from client] */}
                 </p>
               </div>
@@ -178,9 +178,9 @@ export default function GalleryPage() {
               </div>
               <ul className="quick-links" role="list">
                 <li className={`fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.1s" }}>
-                  <a className="ia-link ia-link--arrow" href="tel:7187491830">
+                  <a className="ia-link ia-link--arrow" href="tel:5163550977">
                     <i className="icon-link" />
-                    <span>Call (718) 749-1830</span>
+                    <span>Call (516) 355-0977</span>
                   </a>
                 </li>
                 <li className={`fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.2s" }}>
@@ -218,8 +218,8 @@ export default function GalleryPage() {
             style={{ animationDelay: "0.2s" }}
           >
             <p>
-              Scroll through clogs we&apos;ve cleared across the area. From grease-packed kitchen
-              lines to root-choked main sewers — we document our work and stand behind every job.
+              Browse completed roofing, siding, and window projects across the area. From storm-damaged
+              shingles to full tear-offs — we document our work and stand behind every job.
             </p>
           </div>
           <div
@@ -249,7 +249,7 @@ export default function GalleryPage() {
       >
         <div className="inner inner--slim-1172">
           <div className={`sub-heading wow fadeInUpS${ctaInView ? " is-visible" : ""}`} style={{ animationDelay: "0.1s" }}>
-            Ready to Clear Your Drain?
+            Ready to Get Started?
           </div>
           <h2 className={`h2 wow fadeInUpS${ctaInView ? " is-visible" : ""}`} style={{ animationDelay: "0.2s" }}>
             Same-Day Service Available
@@ -257,14 +257,14 @@ export default function GalleryPage() {
           <div className={`front-donation__in wow fadeInUpS${ctaInView ? " is-visible" : ""}`} style={{ animationDelay: "0.2s" }}>
             <div className="content-entry">
               <p>
-                Call <strong>(718) 749-1830</strong> — we&apos;ll give you an honest price
-                before we start, and we won&apos;t leave until the job is done right.
+                Call <strong>(516) 355-0977</strong> for a free estimate. We&apos;ll assess
+                your roof, siding, or windows and give you an honest written quote — no pressure.
               </p>
             </div>
             <div className="front-donation__btn-wrap">
               <div className="front-donation__btn">
-                <a className="btn btn--primary" href="tel:7187491830">
-                  Call (718) 749-1830
+                <a className="btn btn--primary" href="tel:5163550977">
+                  Call (516) 355-0977
                 </a>
               </div>
             </div>

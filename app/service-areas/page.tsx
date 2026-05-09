@@ -7,46 +7,60 @@ import { useInView } from "framer-motion";
 
 const areas = [
   {
-    slug: "brooklyn",
-    region: "Brooklyn",
-    headline: "Drain & Sewer Specialists in Brooklyn",
-    description:
-      "Brooklyn has some of the oldest plumbing infrastructure in New York — pre-war pipe systems, clay drain lines in brownstones, and cast iron stacks in walk-ups that have been running for 80+ years. Our techs know exactly what to expect when they pull up to a building in Park Slope vs. Bay Ridge, and they arrive with the right equipment the first time.",
-    callouts: [
-      "Brownstone & pre-war walk-up specialists",
-      "Stack drain issues in multi-family buildings",
-      "Same-day service, all neighborhoods",
-    ],
-    neighborhoods:
-      "Williamsburg • Greenpoint • Bushwick • Bed-Stuy • Crown Heights • Park Slope • Sunset Park • Bay Ridge • Bensonhurst • Dyker Heights • Gravesend • Sheepshead Bay • Coney Island • Flatbush • Canarsie • East New York & More",
-  },
-  {
     slug: "queens",
     region: "Queens",
-    headline: "Drain & Sewer Specialists in Queens",
+    headline: "Roofing & Siding Specialists in Queens",
     description:
-      "Queens covers one of the widest mixes of home types in the entire city — from single-family houses in Whitestone and Bayside to dense apartment buildings in Astoria and Flushing. Our team handles everything from slow kitchen drains in a LIC condo to main line backups in a multi-unit Jackson Heights walk-up.",
+      "Queens is home base for Bellerose Roofing & Siding. We've been working on Queens rooftops, facades, and windows for over 35 years — from attached row houses in Woodside and Sunnyside to larger detached homes in Bayside and Whitestone. We know exactly how New York City's weather affects Queens homes and what each roof type needs to last.",
     callouts: [
-      "Single-family homes to large apartment buildings",
-      "Grease line clearing for restaurants & commercial kitchens",
-      "Emergency same-day response across all of Queens",
+      "35+ years serving Queens homeowners",
+      "Row houses, detached homes & residential buildings",
+      "Free estimates — same week, no pressure",
     ],
     neighborhoods:
-      "Astoria • LIC • Maspeth • Flushing • Whitestone • Bayside • Forest Hills • Rego Park • Jackson Heights • Elmhurst • Middle Village • Ridgewood • Woodside • Sunnyside • Jamaica • Howard Beach & More",
+      "Floral Park • Jamaica • Bayside • Flushing • Forest Hills • Rego Park • Astoria • Woodside • Jackson Heights • Middle Village • Elmhurst • Maspeth • Howard Beach • Ozone Park • Richmond Hill • Springfield Gardens & More",
+  },
+  {
+    slug: "nyc-5-boroughs",
+    region: "NYC — All 5 Boroughs",
+    headline: "Roofing & Siding Across All 5 NYC Boroughs",
+    description:
+      "Bellerose Roofing & Siding serves all five New York City boroughs. From Brooklyn brownstones to Staten Island colonials to Bronx multi-family buildings, we handle roofing repairs, full tear-offs, siding, and window installations across the full NYC metro area. Fully licensed in New York City — NYC Lic# 1259922.",
+    callouts: [
+      "NYC licensed — Lic# 1259922",
+      "Residential and commercial roofing & siding",
+      "Free estimates across all 5 boroughs",
+    ],
+    neighborhoods:
+      "Brooklyn (Park Slope, Bay Ridge, Flatbush, Canarsie, and more) • Manhattan • The Bronx • Staten Island • and all of Queens",
   },
   {
     slug: "nassau-county",
     region: "Nassau County",
-    headline: "Drain & Sewer Specialists in Nassau County",
+    headline: "Roofing & Siding Specialists in Nassau County",
     description:
-      "Nassau County homes sit on longer sewer runs than most NYC properties, and mature tree root systems along those lines are one of the leading causes of main line backups. Our technicians understand how Nassau systems are laid out, where clogs typically form, and how to clear them without damaging the pipe.",
+      "Nassau County is one of our most active service areas. We're based in Floral Park and work across Nassau daily — from valley stream to Massapequa, Garden City to Hewlett. Nassau County homes deal with mature tree canopies, salt air near the South Shore, and the same freeze-thaw cycles that stress roofing systems throughout the Northeast. We know what lasts here and what doesn't. Nassau License #H18B8620000.",
     callouts: [
-      "Root intrusion specialists for Nassau main lines",
-      "Hydro jetting for long sewer runs",
-      "Local techs — not dispatched from far away",
+      "Based in Floral Park — Nassau County locals",
+      "Nassau License #H18B8620000",
+      "All roof types: asphalt, tile, rubber, and more",
     ],
     neighborhoods:
       "Valley Stream • Elmont • Franklin Square • West Hempstead • Hempstead • Garden City • Mineola • New Hyde Park • Floral Park • Rockville Centre • Oceanside • Baldwin • Freeport • Merrick • Bellmore • Wantagh • Seaford • Massapequa • Levittown • East Meadow • Uniondale • Lynbrook • Malverne • Hewlett & More",
+  },
+  {
+    slug: "suffolk-county",
+    region: "Suffolk County",
+    headline: "Roofing & Siding Specialists in Suffolk County",
+    description:
+      "Bellerose Roofing & Siding also serves Suffolk County homeowners. If you're located in Western Suffolk and looking for a licensed, experienced roofing and siding contractor, call us. We'll confirm coverage for your specific location and can often be out for a free estimate within the same week.",
+    callouts: [
+      "Serving Western Suffolk County",
+      "Free estimate — call to confirm your area",
+      "Same 35-year track record, same quality work",
+    ],
+    neighborhoods:
+      "Call (516) 355-0977 to confirm coverage in your Suffolk County location",
   },
 ];
 
@@ -83,7 +97,7 @@ function AreaSection({ area, reversed }: { area: typeof areas[number]; reversed:
             </p>
             <p>
               Not sure if we cover your street?{" "}
-              <a href="tel:7187491830" className="ia-link">Call (718) 749-1830</a>{" "}
+              <a href="tel:5163550977" className="ia-link">Call (516) 355-0977</a>{" "}
               — we almost certainly do.
             </p>
           </div>
@@ -116,7 +130,7 @@ export default function ServiceAreasPage() {
               <span className="post post-page current-item">Service Areas</span>
             </div>
             <h1 className={`ia-white ia-margin-0 fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.1s" }}>
-              We Come to You
+              We Come to Your Roof
             </h1>
           </div>
         </div>
@@ -127,9 +141,9 @@ export default function ServiceAreasPage() {
               <div className={`sub-heading fadeInUpS wow${heroVis}`}>Coverage Area</div>
               <div className={`content-entry fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.1s" }}>
                 <p>
-                  Pipe Monkeys serves all of Brooklyn, Queens, and Nassau County. We don&apos;t
-                  subcontract — our own techs cover every neighborhood, every day, seven days a week.
-                  Same-day scheduling is available across our entire service area.
+                  Bellerose Roofing &amp; Siding serves Queens, all 5 NYC boroughs, Nassau County, and
+                  Suffolk County. Family-owned and operated for over 35 years — we know these
+                  neighborhoods and we know what it takes to do quality work in New York&apos;s climate.
                 </p>
               </div>
             </div>
@@ -148,9 +162,9 @@ export default function ServiceAreasPage() {
                   </li>
                 ))}
                 <li className={`fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.4s" }}>
-                  <a className="ia-link ia-link--arrow" href="tel:7187491830">
+                  <a className="ia-link ia-link--arrow" href="tel:5163550977">
                     <i className="icon-link" />
-                    <span>Call (718) 749-1830</span>
+                    <span>Call (516) 355-0977</span>
                   </a>
                 </li>
               </ul>
@@ -174,19 +188,20 @@ export default function ServiceAreasPage() {
             Not Sure If We Cover You?
           </div>
           <h2 className={`h2 wow fadeInUpS${ctaInView ? " is-visible" : ""}`} style={{ animationDelay: "0.2s" }}>
-            Just Call — We Almost Certainly Do
+            Call for a Free Estimate — We Cover More Than You Think
           </h2>
           <div className={`front-donation__in wow fadeInUpS${ctaInView ? " is-visible" : ""}`} style={{ animationDelay: "0.2s" }}>
             <div className="content-entry">
               <p>
-                Our dispatch is fast and our coverage is wide. Call <strong>(718) 749-1830</strong> and
-                we&apos;ll confirm in 30 seconds and get you on the schedule the same day.
+                Our coverage spans Queens, all 5 boroughs, Nassau, and Suffolk. Call{" "}
+                <strong>(516) 355-0977</strong> and we&apos;ll confirm your area and get you a free
+                estimate scheduled fast.
               </p>
             </div>
             <div className="front-donation__btn-wrap">
               <div className="front-donation__btn">
-                <a className="btn btn--primary" href="tel:7187491830">
-                  Call (718) 749-1830
+                <a className="btn btn--primary" href="tel:5163550977">
+                  Call (516) 355-0977
                 </a>
               </div>
             </div>

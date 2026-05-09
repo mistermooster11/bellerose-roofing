@@ -16,23 +16,24 @@ export default function HomeCTA() {
     >
       <div className="inner inner--slim-1172">
         <div className={`sub-heading wow fadeInUpS${vis}`} style={{ animationDelay: "0.1s" }}>
-          Same-Day Service Available
+          Free Estimates Available
         </div>
         <h2 className={`h2 wow fadeInUpS${vis}`} style={{ animationDelay: "0.15s" }}>
-          Don&apos;t Wait — Call Now
+          Ready to Get Started? Call Today.
         </h2>
         <div className={`front-donation__in wow fadeInUpS${vis}`} style={{ animationDelay: "0.2s" }}>
           <div className="content-entry">
             <p>
-              Backed up drains don&apos;t fix themselves. Our Brooklyn, Queens &amp; Nassau County
-              techs are on the road every day — call us and we&apos;ll get someone out fast.
+              Whether you need a roof repaired after a storm or want to upgrade your
+              home&apos;s siding, Bellerose Roofing &amp; Siding serves Queens, the 5 boroughs,
+              Nassau, and Suffolk County. Call us and we&apos;ll get you a free estimate fast.
             </p>
           </div>
           <div className="front-donation__btn-wrap">
             <div className="front-donation__btn">
               <SecondaryButton
-                label="Call (718) 749-1830"
-                href="tel:7187491830"
+                label="Call (516) 355-0977"
+                href="tel:5163550977"
               />
             </div>
           </div>
