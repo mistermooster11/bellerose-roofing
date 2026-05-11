@@ -8,7 +8,7 @@ export default function ChannelCrafts({ data }: { data: CraftsData }) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "0px 0px -60px 0px" });
   const vis = inView ? " is-visible" : "";
-  const catalogHref = data.catalogHref ?? "https://www.nccer.org/craft-catalog/";
+  const catalogHref = data.catalogHref ?? "/craft-catalog";
 
   return (
     <div id="crafts" className="section-page">

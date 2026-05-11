@@ -1,23 +1,8 @@
 import Link from 'next/link';
 import { ExternalLink } from 'lucide-react';
 
-const socialLinks = [
-  {
-    label: 'Donate',
-    href: 'https://secure.givelively.org/donate/national-center-for-construction-education-research/build-america-change-lives',
-    filled: false,
-  },
-  {
-    label: 'Support',
-    href: 'https://tracker.pardot.nccer.org/l/961192/2024-03-22/5hfvt',
-    filled: false,
-  },
-  {
-    label: 'Sign In',
-    href: 'https://web.myaccount.nccer.org/',
-    filled: true,
-  },
-];
+// [TODO: Replace with client's real social/CTA links once social URLs are confirmed]
+const socialLinks: { label: string; href: string; filled: boolean }[] = [];
 
 interface SocialLinksProps {
   /** 'row' = horizontal (Topnav desktop), 'column' = vertical (MobileNav) */
@@ -26,6 +11,8 @@ interface SocialLinksProps {
 }
 
 export default function SocialLinks({ layout = 'row', onClick }: SocialLinksProps) {
+  if (socialLinks.length === 0) return null;
+
   return (
     <ul
       className={[

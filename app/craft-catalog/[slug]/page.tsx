@@ -24,6 +24,11 @@ export async function generateMetadata({
   return {
     title: `${data.title} — Bellerose Roofing & Siding`,
     description: `Professional ${data.title.toLowerCase()} across Queens, NYC, Nassau & Suffolk County. Free estimates, honest pricing, 35+ years of experience.`,
+    openGraph: {
+      title: `${data.title} — Bellerose Roofing & Siding`,
+      description: `Professional ${data.title.toLowerCase()} across Queens, NYC, Nassau & Suffolk County. Free estimates, honest pricing, 35+ years of experience.`,
+      url: `https://belleroseroofingsiding.com/craft-catalog/${slug}`,
+    },
   };
 }
 
@@ -36,8 +41,22 @@ export default async function ServiceDetailPage({
   const data = servicePages[slug];
   if (!data) notFound();
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://belleroseroofingsiding.com" },
+      { "@type": "ListItem", position: 2, name: "Services", item: "https://belleroseroofingsiding.com/craft-catalog" },
+      { "@type": "ListItem", position: 3, name: data.title, item: `https://belleroseroofingsiding.com/craft-catalog/${slug}` },
+    ],
+  };
+
   return (
     <main className="pt-76 max-[1150px]:pt-[6.2rem]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <CraftHero
         title={data.title}
         bgImage={PLACEHOLDER_BG}

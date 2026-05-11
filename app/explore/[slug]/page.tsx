@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { getChannelData, channelDataMap } from "@/data/channel";
 import ChannelHero         from "@/components/custom/channel/ChannelHero";
 import ChannelSidebar      from "@/components/custom/channel/ChannelSidebar";
@@ -8,6 +9,27 @@ import ChannelCrafts       from "@/components/custom/channel/ChannelCrafts";
 import ChannelTestimonials from "@/components/custom/channel/ChannelTestimonials";
 import ChannelFlexFeature  from "@/components/custom/channel/ChannelFlexFeature";
 import ChannelGetInTouch   from "@/components/custom/channel/ChannelGetInTouch";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const data = getChannelData(slug);
+  if (!data) return {};
+  return {
+    title: "About Us — Bellerose Roofing & Siding",
+    description:
+      "Learn about Bellerose Roofing & Siding — a family-owned roofing, siding, and window contractor serving Queens, NYC, Nassau County, and Suffolk County for 35+ years.",
+    openGraph: {
+      title: "About Bellerose Roofing & Siding",
+      description:
+        "Family-owned and operated for 35+ years. Roofing, siding, and windows across Queens, NYC, and Long Island. Licensed & insured.",
+      url: `https://belleroseroofingsiding.com/explore/${slug}`,
+    },
+  };
+}
 
 /* Pre-render all known slugs at build time */
 export function generateStaticParams() {

@@ -10,7 +10,7 @@ export default function ChannelHero({ data }: { data: HeroData }) {
   const inView = useInView(ref, { once: true, margin: "0px 0px -60px 0px" });
   const vis = inView ? " is-visible" : "";
 
-  const parentLabel = data.breadcrumbParentLabel ?? "NCCER for Organizations";
+  const parentLabel = data.breadcrumbParentLabel ?? "About Us";
   const parentHref  = data.breadcrumbParentHref  ?? "/explore/";
 
   return (
