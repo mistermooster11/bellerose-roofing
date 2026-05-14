@@ -47,21 +47,21 @@ const InsightAccordionItem: React.FC<InsightAccordionItemProps> = ({
           {/* Description shown on expand */}
           <p
             className="p3"
-            style={{ color: 'var(--color-brand-navy)', marginBottom: '1rem', lineHeight: 1.6 }}
+            style={{ color: '#252525', marginBottom: '1rem', lineHeight: 1.6 }}
           >
             {item.description}
           </p>
-          <Link href={item.learnHref} className="ia-link" style={{ fontSize: '1.3rem' }}>
+          <Link href={item.learnHref} className="ia-link ia-link--green" style={{ fontSize: '1.3rem', color: '#4CAF51' }}>
             <span>Full Service Details →</span>
           </Link>
 
           {/* Mobile only: steps + CTA */}
           <div className="mob-version" style={{ marginTop: '2rem' }}>
-            <p style={{ fontWeight: 700, marginBottom: '1rem', color: 'var(--color-brand-navy)' }}>
+            <p style={{ fontWeight: 700, marginBottom: '1rem', color: '#252525' }}>
               How We Handle It
             </p>
             {item.steps.map((step, i) => (
-              <p key={i} className="p3" style={{ marginBottom: '0.75rem', color: 'var(--color-brand-navy)' }}>
+              <p key={i} className="p3" style={{ marginBottom: '0.75rem', color: '#252525' }}>
                 <strong>Step {i + 1} — {step.label}.</strong> {step.body}
               </p>
             ))}

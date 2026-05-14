@@ -80,7 +80,7 @@
 .ia-white     { color: #fff; }
 .ia-sky       { color: var(--c-sky); }
 .ia-orange    { color: var(--c-orange); }
-.ia-dark      { color: var(--c-navy); }
+.ia-dark      { color: #252525; }
 
 /* --- Button component --- */
 /* ============================================================
@@ -193,7 +193,7 @@
 .ia-link {
   font-size: 1.4rem;
   font-weight: 500;
-  color: var(--c-navy);
+  color: #4CAF51;
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
@@ -497,7 +497,7 @@
   transition: opacity .8s, transform .8s;
 }
 .accordion-item.opened .accordion-item-in::before { opacity: 1; transform: rotate(0); }
-.accordion-item.opened .accordion-item__title { color: var(--c-blue); }
+.accordion-item.opened .accordion-item__title { color: #252525; }
 .accordion-item.opened .accordion-item__title i { transform: translate(0, -50%) scaleY(-1); }
 .accordion-item.opened .accordion-item__door { opacity: 1; transform: rotate(0); }
 
@@ -538,7 +538,7 @@
   padding: 2rem 6rem 2rem 3rem;
   position: relative;
   cursor: pointer;
-  color: var(--c-navy);
+  color: #252525;
   transition: color .35s;
 }
 .accordion-item__title i {
