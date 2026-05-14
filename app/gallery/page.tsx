@@ -74,7 +74,7 @@ function GalleryCard({ item, delay }: { item: typeof galleryItems[number]; delay
           display: "inline-block",
           marginBottom: "1.5rem",
           padding: "0.4rem 1.2rem",
-          background: "var(--ia-sky, #a1c5d3)",
+          background: "var(--ia-sky, #FFF6C6)",
           borderRadius: "4px",
           fontSize: "1.2rem",
           fontWeight: 600,
