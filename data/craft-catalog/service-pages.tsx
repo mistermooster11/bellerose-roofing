@@ -22,7 +22,7 @@ export const servicePages: Record<string, ServicePageData> = {
   /* ─── ROOFING REPAIRS ───────────────────────────────────────────────────── */
   "roofing-repairs": {
     title: "Roofing Repairs",
-    bgColor: "#101d2b",
+    bgColor: "#252525",
     navItems: [
       { href: "#overview",          label: "Overview"          },
       { href: "#when_you_need_it",  label: "When You Need It"  },
@@ -112,7 +112,7 @@ export const servicePages: Record<string, ServicePageData> = {
   /* ─── SIDING REPAIRS ────────────────────────────────────────────────────── */
   "siding-repairs": {
     title: "Siding Repairs",
-    bgColor: "#101d2b",
+    bgColor: "#252525",
     navItems: [
       { href: "#overview",          label: "Overview"         },
       { href: "#when_you_need_it",  label: "When You Need It" },
@@ -198,7 +198,7 @@ export const servicePages: Record<string, ServicePageData> = {
   /* ─── ROOFING TEAR-OFFS & NEW INSTALLS ─────────────────────────────────── */
   "roofing-tearoffs-and-installs": {
     title: "Roofing Tear-Offs & New Installs",
-    bgColor: "#101d2b",
+    bgColor: "#252525",
     navItems: [
       { href: "#overview",          label: "Overview"         },
       { href: "#when_you_need_it",  label: "When You Need It" },
@@ -288,7 +288,7 @@ export const servicePages: Record<string, ServicePageData> = {
   /* ─── WINDOWS & SKYLIGHTS ───────────────────────────────────────────────── */
   "windows-and-skylights": {
     title: "Windows & Skylights",
-    bgColor: "#101d2b",
+    bgColor: "#252525",
     navItems: [
       { href: "#overview",          label: "Overview"         },
       { href: "#when_you_need_it",  label: "When You Need It" },

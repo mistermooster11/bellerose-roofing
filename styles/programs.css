@@ -24,7 +24,7 @@
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(149.79deg, #111E2C -0.06%, rgba(23, 37, 53, 0) 35.45%);
+  background: linear-gradient(149.79deg, #1a1a1a -0.06%, rgba(37,37,37, 0) 35.45%);
   transform: matrix(-1, 0, 0, 1, 0, 0);
   z-index: 10;
 }
@@ -33,7 +33,7 @@
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(180deg, rgba(23, 37, 53, 0) 36.39%, rgba(19, 32, 46, 0.716) 68.02%, #111E2C 96.94%);
+  background: linear-gradient(180deg, rgba(37,37,37, 0) 36.39%, rgba(37,37,37, 0.716) 68.02%, #1a1a1a 96.94%);
   z-index: 10;
 }
 
